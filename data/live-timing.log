@@ -2,3 +2,7 @@
 [2026-06-19T11:38:25.332289] Loaded entry list: 62 cars
 [2026-06-19T11:38:25.332310] RaceMonitor scrape not implemented (JS wall). Returning mock data.
 [2026-06-19T11:38:27.333845] Saved live timing data to /root/.hermes/workspace/projects/lemans-2026-viewer/scripts/../data/live-timing.json
+[2026-06-20T10:17:59.340371] Starting live timing refresh
+[2026-06-20T10:17:59.340791] Loaded entry list: 62 cars
+[2026-06-20T10:17:59.340816] RaceMonitor scrape not implemented (JS wall). Returning mock data.
+[2026-06-20T10:18:01.343485] Saved live timing data to /root/.hermes/workspace/projects/lemans-2026-viewer/scripts/../data/live-timing.json

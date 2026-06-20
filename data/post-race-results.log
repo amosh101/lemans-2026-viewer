@@ -3,3 +3,8 @@
 [2026-06-19T11:38:30.651037] fiawec.com final results scrape not implemented (JS wall). Returning mock data.
 [2026-06-19T11:38:32.652100] Saved final results to /root/.hermes/workspace/projects/lemans-2026-viewer/scripts/../data/2026-results-final.json
 [2026-06-19T11:38:32.654012] Updated entry list with final results
+[2026-06-20T10:18:05.695524] Starting post-race results fetch
+[2026-06-20T10:18:05.696097] Loaded entry list: 62 cars
+[2026-06-20T10:18:05.696149] fiawec.com final results scrape not implemented (JS wall). Returning mock data.
+[2026-06-20T10:18:07.697056] Saved final results to /root/.hermes/workspace/projects/lemans-2026-viewer/scripts/../data/2026-results-final.json
+[2026-06-20T10:18:07.698898] Updated entry list with final results
