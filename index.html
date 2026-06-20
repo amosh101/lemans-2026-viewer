@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<title>24H Le Mans 2026 — Live Standings & Entry</title>
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #000000;
+  --bg-elev: #0a0a0a;
+  --bg-card: #111111;
+  --bg-card-hover: #1a1a1a;
+  --border: #1f1f1f;
+  --border-light: #2a2a2a;
+  --fg: #f0f0fa;
+  --fg-dim: #a0a0b0;
+  --fg-muted: #6b6b7b;
+  --accent: #dc2626;       /* Le Mans red */
+  --accent-glow: rgba(220, 38, 38, 0.3);
+  --hypercar: #dc2626;
+  --lmp2: #2563eb;
+  --lmp2-proam: #7c3aed;
+  --lmgt3: #16a34a;
+  --live: #10b981;
+  --live-glow: rgba(16, 185, 129, 0.4);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', -apple-system, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+body { min-height: 100vh; padding-bottom: 4rem; }
+
+/* === HERO === */
+.hero {
+  padding: 4rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(220, 38, 38, 0.15), transparent 70%),
+    linear-gradient(180deg, #000 0%, var(--bg) 100%);
+  text-align: center;
+}
+.hero-tag {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 0.75rem;
+}
+.hero-title {
+  font-size: clamp(2rem, 7vw, 3.5rem); font-weight: 900; letter-spacing: -0.03em; line-height: 0.95;
+  margin-bottom: 0.5rem;
+}
+.hero-subtitle {
+  font-size: 0.95rem; color: var(--fg-dim); letter-spacing: 0.05em; margin-bottom: 1.5rem;
+}
+.hero-edition {
+  display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em;
+  color: var(--fg-muted); text-transform: uppercase;
+  padding: 0.4rem 0.8rem; border: 1px solid var(--border-light); border-radius: 100px;
+}
+
+/* === RACE STATUS CARD === */
+.race-status {
+  margin: 1.5rem auto 0; max-width: 600px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.25rem 1.5rem;
+  position: relative; overflow: hidden;
+}
+.race-status::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+.status-row {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 0.5rem;
+}
+.status-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
+  color: var(--fg-muted); text-transform: uppercase;
+}
+.status-value {
+  font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.status-meta {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  padding-top: 0.75rem; margin-top: 0.75rem; border-top: 1px solid var(--border);
+  font-size: 0.8rem; color: var(--fg-dim);
+}
+.status-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+.status-meta-item span:first-child { font-size: 0.65rem; color: var(--fg-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.live-pulse {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--live); margin-right: 0.5rem;
+  animation: pulse 1.5s ease-in-out infinite;
+  box-shadow: 0 0 8px var(--live-glow);
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+/* === SECTION TITLE === */
+.section {
+  padding: 2rem 1.5rem; max-width: 1200px; margin: 0 auto;
+}
+.section-title {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em;
+  color: var(--fg-muted); text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* === CLASS CARDS === */
+.class-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem; margin-bottom: 1rem;
+}
+.class-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--class-color, var(--accent));
+  cursor: pointer; transition: background 0.2s, transform 0.2s;
+  text-decoration: none; color: inherit; display: block;
+}
+.class-card:hover { background: var(--bg-card-hover); transform: translateY(-2px); }
+.class-name { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+.class-desc { font-size: 0.8rem; color: var(--fg-dim); line-height: 1.4; margin-bottom: 0.75rem; }
+.class-stats { display: flex; gap: 1rem; font-size: 0.75rem; color: var(--fg-muted); }
+.class-stat-num { font-size: 1.4rem; font-weight: 800; color: var(--fg); font-variant-numeric: tabular-nums; }
+.class-stat-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-muted); }
+
+/* === TOGGLE === */
+.toggle-wrap {
+  display: flex; justify-content: center; margin-bottom: 1.5rem;
+}
+.toggle {
+  display: inline-flex; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: 100px; padding: 4px;
+}
+.toggle-btn {
+  padding: 0.6rem 1.5rem; border: none; background: transparent;
+  color: var(--fg-dim); font-family: inherit; font-size: 0.8rem;
+  font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  cursor: pointer; border-radius: 100px; transition: all 0.2s;
+}
+.toggle-btn.active {
+  background: var(--fg); color: var(--bg);
+  box-shadow: 0 2px 8px rgba(240, 240, 250, 0.2);
+}
+
+/* === STANDINGS TABLES === */
+.standings-group { margin-bottom: 2.5rem; }
+.standings-header {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 0.75rem; padding: 0 0.25rem;
+}
+.standings-class {
+  font-size: 1rem; font-weight: 800; letter-spacing: -0.01em;
+}
+.standings-count {
+  font-size: 0.7rem; color: var(--fg-muted);
+  font-weight: 600; padding: 0.2rem 0.5rem;
+  background: var(--bg-card); border-radius: 100px;
+}
+.standings-table {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+}
+.standings-row {
+  display: grid;
+  grid-template-columns: 40px 60px 1fr 80px 60px;
+  align-items: center; gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none; color: inherit;
+  cursor: pointer; transition: background 0.15s;
+  font-size: 0.85rem;
+}
+.standings-row:last-child { border-bottom: none; }
+.standings-row:hover { background: var(--bg-card-hover); }
+.standings-row.header-row {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em;
+  color: var(--fg-muted); text-transform: uppercase;
+  padding: 0.6rem 1rem; background: rgba(255, 255, 255, 0.02);
+  cursor: default; pointer-events: none;
+}
+.standings-row.header-row:hover { background: rgba(255, 255, 255, 0.02); }
+.cell-pos { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--fg); font-size: 0.95rem; }
+.cell-num {
+  font-weight: 700; font-variant-numeric: tabular-nums;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.car-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.cell-team { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cell-team-sub { font-size: 0.7rem; color: var(--fg-muted); margin-top: 0.1rem; }
+.cell-meta { font-size: 0.75rem; color: var(--fg-dim); text-align: right; font-variant-numeric: tabular-nums; }
+.cell-pts { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+.podium { color: var(--accent); }
+.leader-row { background: linear-gradient(90deg, rgba(220, 38, 38, 0.05) 0%, transparent 100%); }
+
+/* === EMPTY / NOTES === */
+.note {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1rem 1.25rem;
+  font-size: 0.8rem; color: var(--fg-dim); line-height: 1.5;
+  margin-top: 1rem;
+}
+.note strong { color: var(--fg); }
+
+/* === FOOTER === */
+.footer {
+  text-align: center; padding: 3rem 1rem 2rem; color: var(--fg-muted);
+  font-size: 0.75rem; border-top: 1px solid var(--border); margin-top: 3rem;
+}
+.footer a { color: var(--fg-dim); text-decoration: none; margin: 0 0.5rem; }
+.footer a:hover { color: var(--fg); }
+
+/* === MOBILE === */
+@media (max-width: 600px) {
+  .hero { padding: 3rem 1rem 1.5rem; }
+  .section { padding: 1.5rem 1rem; }
+  .standings-row { grid-template-columns: 30px 50px 1fr 60px; }
+  .standings-row .cell-meta { display: none; }
+  .status-meta { gap: 1rem; }
+  .class-stats { flex-direction: column; gap: 0.5rem; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .live-pulse { animation: none; }
+  .class-card, .standings-row { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-tag">94<sup>th</sup> Edition</div>
+  <h1 class="hero-title">24 Hours of Le Mans</h1>
+  <p class="hero-subtitle">Circuit de la Sarthe, Le Mans, France</p>
+  <span class="hero-edition">13 – 14 June 2026 · FIA WEC Round 3 of 8</span>
+
+  <div class="race-status">
+    <div class="status-row">
+      <span class="status-label">Status</span>
+      <span class="status-value" id="statusValue">—</span>
+    </div>
+    <div class="status-row">
+      <span class="status-label">Race Time</span>
+      <span class="status-value" id="raceTime">—</span>
+    </div>
+    <div class="status-meta">
+      <div class="status-meta-item">
+        <span>Cars Started</span>
+        <span id="carsStarted">62</span>
+      </div>
+      <div class="status-meta-item">
+        <span>Class Leaders</span>
+        <span>4 (H / LMP2 / LMP2-PA / LMGT3)</span>
+      </div>
+      <div class="status-meta-item">
+        <span>Last Updated</span>
+        <span id="lastUpdated">—</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CLASS BREAKDOWN -->
+<section class="section">
+  <h2 class="section-title">Class Entry</h2>
+  <div class="class-grid" id="classGrid"></div>
+</section>
+
+<!-- STANDINGS WITH TOGGLE -->
+<section class="section">
+  <h2 class="section-title">Standings</h2>
+  <div class="toggle-wrap">
+    <div class="toggle" role="tablist">
+      <button class="toggle-btn active" data-view="race">Race</button>
+      <button class="toggle-btn" data-view="championship">Championship</button>
+    </div>
+  </div>
+
+  <div id="standingsView"></div>
+</section>
+
+<footer class="footer">
+  <div>
+    <a href="./classes.html">Classes</a>·
+    <a href="./regulations.html">Regulations</a>·
+    <a href="./history.html">History</a>
+  </div>
+  <div style="margin-top:0.5rem;">
+    Tailscale-only · Built for the 94<sup>th</sup> 24 Hours of Le Mans · Data: Wikipedia + FIA WEC
+  </div>
+</footer>
+
+<script>
+// === EMBEDDED DATA (so the page works without fetch) ===
+const ENTRY_LIST = null; // will be loaded below
+const CHAMPIONSHIP = null;
+const RACE_CARD = null;
+const HISTORY = null;
+
+// === DATA LOADER ===
+async function loadData() {
+  const [el, ch, rc, h] = await Promise.all([
+    fetch('./data/entry-list.json').then(r => r.json()),
+    fetch('./data/championship.json').then(r => r.json()),
+    fetch('./data/race-card.json').then(r => r.json()),
+    fetch('./data/history.json').then(r => r.json()).catch(() => ({winners:[]})),
+  ]);
+  return {el, ch, rc, h};
+}
+
+// === RENDER FUNCTIONS ===
+function renderClassGrid(classes) {
+  const grid = document.getElementById('classGrid');
+  const ordered = ['Hypercar', 'LMP2', 'LMP2 Pro-Am', 'LMGT3'];
+  grid.innerHTML = ordered.filter(c => classes[c]).map(c => {
+    const cls = classes[c];
+    return `
+      <a class="class-card" href="./classes.html#${encodeURIComponent(c)}" style="--class-color: var(--${c === 'Hypercar' ? 'hypercar' : c === 'LMP2' ? 'lmp2' : c === 'LMP2 Pro-Am' ? 'lmp2-proam' : 'lmgt3'});">
+        <div class="class-name">${c}</div>
+        <div class="class-desc">${cls.description}</div>
+        <div class="class-stats">
+          <div>
+            <div class="class-stat-num">${cls.count}</div>
+            <div class="class-stat-label">Entries</div>
+          </div>
+        </div>
+      </a>
+    `;
+  }).join('');
+}
+
+function raceStandings(classes) {
+  // Build race-classified standings from entry list (qualifying order)
+  const groups = {Hypercar: [], 'LMP2': [], 'LMP2 Pro-Am': [], LMGT3: []};
+  classes.cars.forEach(c => {
+    if (groups[c.class]) groups[c.class].push(c);
+  });
+  // Each car already has grid_pos, sort by it
+  Object.values(groups).forEach(arr => arr.sort((a,b) => (a.grid_pos||999) - (b.grid_pos||999)));
+  return groups;
+}
+
+function championshipStandings(ch) {
+  // Hypercar manufacturers
+  const hypercar = ch.hypercar_manufacturers || [];
+  // LMGT3 teams
+  const lmgt3 = ch.lmgt3_teams || [];
+  // LMP2 / LMP2 Pro-Am — no separate team standings available
+  return {
+    'Hypercar (Manufacturer Championship)': hypercar.map(h => ({
+      pos: h.pos, name: h.manufacturer, car: '', livery_color: '', meta: h.points + ' pts'
+    })),
+    'LMGT3 (Teams Championship)': lmgt3.map(t => ({
+      pos: t.pos, name: t.team, car: '#' + t.car_number, livery_color: '', meta: t.points + ' pts'
+    })),
+    'LMP2 (incl. Pro-Am)': [],
+    'LMP2 Pro-Am': [],
+  };
+}
+
+function renderStandings(groups, currentView) {
+  const view = document.getElementById('standingsView');
+  if (currentView === 'race') {
+    const order = ['Hypercar', 'LMP2', 'LMP2 Pro-Am', 'LMGT3'];
+    let html = '';
+    order.forEach(cls => {
+      const arr = groups[cls] || [];
+      if (!arr.length) return;
+      html += `
+        <div class="standings-group">
+          <div class="standings-header">
+            <span class="standings-class">${cls}</span>
+            <span class="standings-count">${arr.length} cars</span>
+          </div>
+          <div class="standings-table">
+            <div class="standings-row header-row">
+              <div>Pos</div>
+              <div>Car #</div>
+              <div>Team / Car</div>
+              <div style="text-align:right">Time</div>
+              <div style="text-align:right">Grid</div>
+            </div>
+            ${arr.slice(0, 18).map(c => {
+              const podium = c.grid_pos && c.grid_pos <= 3;
+              return `
+              <a class="standings-row ${c.grid_pos === 1 ? 'leader-row' : ''}" href="./car.html?car=${encodeURIComponent(c.car_number)}">
+                <div class="cell-pos ${podium ? 'podium' : ''}">${c.grid_pos || '—'}</div>
+                <div class="cell-num">
+                  <span class="car-dot" style="background:${c.livery_color}"></span>
+                  ${c.car_number}
+                </div>
+                <div class="cell-team">
+                  ${c.team}
+                  <div class="cell-team-sub">${c.car || ''}</div>
+                </div>
+                <div class="cell-meta">${c.qual_time || '—'}</div>
+                <div class="cell-pts">P${c.grid_pos || '—'}</div>
+              </a>`;
+            }).join('')}
+            ${arr.length > 18 ? `
+              <a class="standings-row" href="./classes.html#${encodeURIComponent(cls)}" style="text-align:center; color: var(--fg-muted); font-size: 0.75rem;">
+                <div></div><div></div>
+                <div>+ ${arr.length - 18} more in ${cls} →</div>
+                <div></div><div></div>
+              </a>` : ''}
+          </div>
+        </div>
+      `;
+    });
+    view.innerHTML = html;
+  } else {
+    // Championship view
+    let html = '';
+    Object.entries(groups).forEach(([cls, arr]) => {
+      if (!arr.length) {
+        if (cls.includes('LMP2')) {
+          html += `
+            <div class="standings-group">
+              <div class="standings-header">
+                <span class="standings-class">${cls}</span>
+              </div>
+              <div class="note">
+                <strong>LMP2 / LMP2 Pro-Am</strong> team championship not separately tracked for 2026 FIA WEC. The LMP2 Pro-Am is a sub-class within LMP2 with no separate team points. Drivers' championship is published separately (see FIA WEC).
+              </div>
+            </div>
+          `;
+        }
+        return;
+      }
+      html += `
+        <div class="standings-group">
+          <div class="standings-header">
+            <span class="standings-class">${cls}</span>
+            <span class="standings-count">${arr.length}</span>
+          </div>
+          <div class="standings-table">
+            <div class="standings-row header-row">
+              <div>Pos</div>
+              <div>${cls.includes('Hypercar') ? 'Make' : 'Car'}</div>
+              <div>${cls.includes('Hypercar') ? 'Manufacturer' : 'Team'}</div>
+              <div></div>
+              <div style="text-align:right">Pts</div>
+            </div>
+            ${arr.map(c => `
+              <div class="standings-row ${c.pos === 1 ? 'leader-row' : ''}">
+                <div class="cell-pos ${c.pos <= 3 ? 'podium' : ''}">${c.pos}</div>
+                <div class="cell-num">${c.car || '—'}</div>
+                <div class="cell-team">${c.name}</div>
+                <div class="cell-meta"></div>
+                <div class="cell-pts">${c.meta}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    });
+    view.innerHTML = html;
+  }
+}
+
+function renderStatus(rc) {
+  const statusEl = document.getElementById('statusValue');
+  const raceTimeEl = document.getElementById('raceTime');
+  const lastUpdatedEl = document.getElementById('lastUpdated');
+  if (!rc) return;
+  if (rc.status === 'in_progress') {
+    statusEl.innerHTML = '<span class="live-pulse"></span>LIVE';
+    raceTimeEl.textContent = `${rc.hours_elapsed}h elapsed of 24h`;
+    lastUpdatedEl.textContent = 'just now';
+  } else if (rc.status === 'finished') {
+    statusEl.innerHTML = 'FINISHED';
+    raceTimeEl.textContent = '24h race complete';
+    lastUpdatedEl.textContent = 'check post-race results';
+  } else {
+    statusEl.innerHTML = 'UPCOMING';
+    raceTimeEl.textContent = `starts in ${rc.countdown_hours}h`;
+    lastUpdatedEl.textContent = 'pre-race';
+  }
+}
+
+// === MAIN ===
+let currentData = null;
+let currentView = 'race';
+
+(async () => {
+  currentData = await loadData();
+  renderClassGrid(currentData.el.classes);
+  renderStandings(raceStandings(currentData.el), currentView);
+  renderStatus(currentData.rc);
+
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentView = btn.dataset.view;
+      const data = currentView === 'race'
+        ? raceStandings(currentData.el)
+        : championshipStandings(currentData.ch);
+      renderStandings(data, currentView);
+    });
+  });
+})();
+</script>
+</body>
+</html>

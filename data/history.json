@@ -1,0 +1,114 @@
+{
+  "winners": [
+    {
+      "year": 2015,
+      "drivers": "Earl Bamber ( NZL )",
+      "class": "LMP1 Tooltip Le Mans Prototype#LMP1",
+      "team": "Porsche Team ( DEU )",
+      "car": "Porsche 919 Hybrid",
+      "tyre": "M",
+      "laps": "395",
+      "km": "5382.82"
+    },
+    {
+      "year": 2016,
+      "drivers": "Romain Dumas ( FRA )",
+      "class": "LMP1 Tooltip Le Mans Prototype#LMP1",
+      "team": "Porsche Team ( DEU )",
+      "car": "Porsche 919 Hybrid",
+      "tyre": "M",
+      "laps": "384",
+      "km": "5233.536"
+    },
+    {
+      "year": 2017,
+      "drivers": "Earl Bamber ( NZL )",
+      "class": "LMP1 Tooltip Le Mans Prototype#LMP1",
+      "team": "Porsche LMP Team ( DEU )",
+      "car": "Porsche 919 Hybrid",
+      "tyre": "M",
+      "laps": "367",
+      "km": "5001.23"
+    },
+    {
+      "year": 2018,
+      "drivers": "Fernando Alonso ( ESP )",
+      "class": "LMP1 Tooltip Le Mans Prototype#LMP1",
+      "team": "Toyota Gazoo Racing ( JPN )",
+      "car": "Toyota TS050 Hybrid",
+      "tyre": "M",
+      "laps": "388",
+      "km": "5286.888"
+    },
+    {
+      "year": 2019,
+      "drivers": "Fernando Alonso ( ESP )",
+      "class": "LMP1 Tooltip Le Mans Prototype#LMP1",
+      "team": "Toyota Gazoo Racing ( JPN )",
+      "car": "Toyota TS050 Hybrid",
+      "tyre": "M",
+      "laps": "385",
+      "km": "5246.01"
+    },
+    {
+      "year": 2020,
+      "drivers": "S\u00e9bastien Buemi ( SUI )",
+      "class": "LMP1 Tooltip Le Mans Prototype#LMP1",
+      "team": "Toyota Gazoo Racing ( JPN )",
+      "car": "Toyota TS050 Hybrid",
+      "tyre": "M",
+      "laps": "387",
+      "km": "5272.46"
+    },
+    {
+      "year": 2021,
+      "drivers": "Mike Conway ( GBR )",
+      "class": "Hypercar",
+      "team": "Toyota Gazoo Racing ( JPN )",
+      "car": "Toyota GR010 Hybrid",
+      "tyre": "M",
+      "laps": "371",
+      "km": "5054.5"
+    },
+    {
+      "year": 2022,
+      "drivers": "S\u00e9bastien Buemi ( SUI )",
+      "class": "Hypercar",
+      "team": "Toyota Gazoo Racing ( JPN )",
+      "car": "Toyota GR010 Hybrid",
+      "tyre": "M",
+      "laps": "380",
+      "km": "5177.17"
+    },
+    {
+      "year": 2023,
+      "drivers": "James Calado ( GBR )",
+      "class": "Hypercar",
+      "team": "Ferrari AF Corse ( ITA )",
+      "car": "Ferrari 499P",
+      "tyre": "M",
+      "laps": "342",
+      "km": "4660.1"
+    },
+    {
+      "year": 2024,
+      "drivers": "Antonio Fuoco ( ITA )",
+      "class": "Hypercar",
+      "team": "Ferrari AF Corse ( ITA )",
+      "car": "Ferrari 499P",
+      "tyre": "M",
+      "laps": "311",
+      "km": "4237.54"
+    },
+    {
+      "year": 2025,
+      "drivers": "Phil Hanson ( GBR )",
+      "class": "Hypercar",
+      "team": "AF Corse ( ITA )",
+      "car": "Ferrari 499P",
+      "tyre": "M",
+      "laps": "387",
+      "km": "5273.26"
+    }
+  ]
+}

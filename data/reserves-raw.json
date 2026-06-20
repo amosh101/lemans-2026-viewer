@@ -1,0 +1,93 @@
+[
+  {
+    "priority": "1st",
+    "class": "LMGT3",
+    "car_number": "86",
+    "team": "GR Racing",
+    "car": "Ferrari 296 GT3 Evo",
+    "tyre": "G",
+    "series": "ELMS",
+    "misc": "",
+    "driver_1": "Michael Wainwright",
+    "driver_2": "TBA",
+    "driver_3": "TBA"
+  },
+  {
+    "priority": "2nd",
+    "class": "LMGT3",
+    "car_number": "56",
+    "team": "Blackthorn",
+    "car": "Aston Martin Vantage AMR GT3 Evo",
+    "tyre": "G",
+    "series": "ALMS",
+    "misc": "",
+    "driver_1": "Dario Franchitti",
+    "driver_2": "Giacomo Petrobelli",
+    "driver_3": "TBA"
+  },
+  {
+    "priority": "3rd",
+    "class": "LMP2",
+    "car_number": "18",
+    "team": "IDEC Sport",
+    "car": "Oreca 07 - Gibson",
+    "tyre": "G",
+    "series": "ELMS",
+    "misc": "P2",
+    "driver_1": "TBA",
+    "driver_2": "TBA",
+    "driver_3": "TBA"
+  },
+  {
+    "priority": "4th",
+    "class": "LMP2",
+    "car_number": "16",
+    "team": "Vector Sport",
+    "car": "Oreca 07 - Gibson",
+    "tyre": "G",
+    "series": "ELMS",
+    "misc": "PA",
+    "driver_1": "Cem B\u00f6l\u00fckba\u015f\u0131",
+    "driver_2": "TBA",
+    "driver_3": "TBA"
+  },
+  {
+    "priority": "5th",
+    "class": "LMGT3",
+    "car_number": "151",
+    "team": "AF Corse",
+    "car": "Ferrari 296 GT3 Evo",
+    "tyre": "G",
+    "series": "ELMS",
+    "misc": "",
+    "driver_1": "Charles-Henri Samani",
+    "driver_2": "TBA",
+    "driver_3": "TBA"
+  },
+  {
+    "priority": "6th",
+    "class": "LMP2",
+    "car_number": "11",
+    "team": "Proton Competition",
+    "car": "Oreca 07 - Gibson",
+    "tyre": "G",
+    "series": "ELMS",
+    "misc": "PA",
+    "driver_1": "TBA",
+    "driver_2": "TBA",
+    "driver_3": "TBA"
+  },
+  {
+    "priority": "WD",
+    "class": "LMP2",
+    "car_number": "47",
+    "team": "Cetilar Racing",
+    "car": "Oreca 07 - Gibson",
+    "tyre": "G",
+    "series": "ALMS",
+    "misc": "PA",
+    "driver_1": "Nicola Lacorte",
+    "driver_2": "Roberto Lacorte",
+    "driver_3": "TBA"
+  }
+]

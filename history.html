@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History — 24H Le Mans</title>
+<meta name="theme-color" content="#000000">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--bg-card:#111;--border:#1f1f1f;--border-light:#2a2a2a;--fg:#f0f0fa;--fg-dim:#a0a0b0;--fg-muted:#6b6b7b;--accent:#dc2626;--gold:#fbbf24;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--fg);font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100vh;padding-bottom:4rem;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.hero{padding:3rem 0 1.5rem;border-bottom:1px solid var(--border)}
+.back-link{display:inline-block;font-size:.75rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:.12em;text-decoration:none;margin-bottom:1.5rem;padding:.4rem .8rem;border:1px solid var(--border);border-radius:100px}
+.back-link:hover{color:var(--fg);border-color:var(--border-light)}
+h1{font-size:clamp(1.75rem,5vw,2.5rem);font-weight:900;letter-spacing:-.02em;margin-bottom:.5rem}
+.subtitle{font-size:.95rem;color:var(--fg-dim);max-width:700px}
+.streak-callout{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;margin-top:1.5rem}
+.streak-callout h3{font-size:1.05rem;font-weight:800;margin-bottom:.4rem}
+.streak-callout p{font-size:.85rem;color:var(--fg-dim);line-height:1.6}
+.section{padding:2rem 0}
+.section-title{font-size:.7rem;font-weight:700;letter-spacing:.18em;color:var(--fg-muted);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.section-title::before{content:'';width:4px;height:14px;background:var(--accent);border-radius:2px}
+.winner-table{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.winner-row{display:grid;grid-template-columns:50px 1.5fr 1.5fr 1fr 80px;gap:.75rem;padding:.85rem 1rem;border-bottom:1px solid var(--border);align-items:center;font-size:.85rem}
+.winner-row:last-child{border-bottom:none}
+.winner-row:hover{background:var(--bg-card-hover)}
+.winner-row.header{font-size:.65rem;font-weight:700;letter-spacing:.12em;color:var(--fg-muted);text-transform:uppercase;padding:.6rem 1rem;background:rgba(255,255,255,.02);cursor:default;pointer-events:none}
+.winner-row.header:hover{background:rgba(255,255,255,.02)}
+.winner-year{font-size:1.4rem;font-weight:900;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--accent)}
+.winner-drivers{font-weight:600}
+.winner-team{font-weight:500}
+.winner-car{font-size:.8rem;color:var(--fg-dim);margin-top:.1rem}
+.winner-laps{font-size:.75rem;color:var(--fg-dim);text-align:right;font-variant-numeric:tabular-nums}
+.footer{text-align:center;padding:2rem 1rem;color:var(--fg-muted);font-size:.75rem;border-top:1px solid var(--border);margin-top:2rem}
+.footer a{color:var(--fg-dim);text-decoration:none;margin:0 .5rem}
+@media(max-width:700px){.container{padding:0 1rem}.winner-row{grid-template-columns:45px 1.5fr 1fr;font-size:.8rem}.winner-row>*:nth-child(4),.winner-row>*:nth-child(5){display:none}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <a class="back-link" href="./">← Standings</a>
+    <h1>Recent Winners (2015-2025)</h1>
+    <p class="subtitle">The last 11 years of Le Mans. Toyota dominated 2018-2022. Ferrari took over 2023-2025. Earl Bamber (2 wins), Fernando Alonso (2 wins), Sébastien Buemi (3 wins) lead the modern era.</p>
+  </div>
+
+  <div class="streak-callout">
+    <h3>Toyota 5-peat (2018-2022)</h3>
+    <p>Toyota Gazoo Racing won Le Mans 5 years in a row: Alonso/Buemi/Nakajima in 2018-2019, Buemi/Nakajima/Hartley in 2020, Conway/Kobayashi/López in 2021, Buemi/Hartley/Hirakawa in 2022. Then Ferrari ended the streak in 2023 with the 499P, exactly 50 years after Ferrari's last Le Mans win (1973 P4).</p>
+  </div>
+
+  <div class="streak-callout">
+    <h3>Ferrari 3-peat (2023-2025)</h3>
+    <p>Ferrari AF Corse has won 3 in a row: Calado/Giovinazzi/Pier Guidi in 2023, Fuoco/Molina/Nielsen in 2024, and Hanson/Kubica/Yifei Ye in 2025 — with a customer #83 car, the biggest upset in recent Le Mans history.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Winners (2015-2025)</div>
+    <div class="winner-table">
+      <div class="winner-row header">
+        <div>Year</div>
+        <div>Drivers</div>
+        <div>Team / Car</div>
+        <div></div>
+        <div style="text-align:right">Laps</div>
+      </div>
+      <div id="winnerRows"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <a href="./">Standings</a>·<a href="./classes.html">Classes</a>·<a href="./regulations.html">Regulations</a>
+  </footer>
+</div>
+
+<script>
+(async () => {
+  const h = await fetch('./data/history.json').then(r => r.json());
+  const winners = h.winners.slice().reverse(); // newest first
+  const fmtDrivers = (s) => s.replace(/\(\s*([A-Z]+)\s*\)/g, '<span style="color:var(--fg-muted);font-size:.7rem;margin-left:.2rem">$1</span>');
+  document.getElementById('winnerRows').innerHTML = winners.map(w => `
+    <div class="winner-row">
+      <div class="winner-year">${w.year}</div>
+      <div class="winner-drivers">${fmtDrivers(w.drivers)}</div>
+      <div class="winner-team">${w.team}<div class="winner-car">${w.car}</div></div>
+      <div></div>
+      <div class="winner-laps">${w.laps}</div>
+    </div>
+  `).join('');
+})();
+</script>
+</body>
+</html>

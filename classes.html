@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<title>Classes — 24H Le Mans 2026</title>
+<meta name="theme-color" content="#000000">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--bg-card:#111;--bg-card-hover:#1a1a1a;--border:#1f1f1f;--border-light:#2a2a2a;--fg:#f0f0fa;--fg-dim:#a0a0b0;--fg-muted:#6b6b7b;--accent:#dc2626;--hypercar:#dc2626;--lmp2:#2563eb;--lmp2-proam:#7c3aed;--lmgt3:#16a34a;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--fg);font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100vh;padding-bottom:4rem}
+.container{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.hero{padding:3rem 0 1.5rem;border-bottom:1px solid var(--border)}
+.back-link{display:inline-block;font-size:.75rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:.12em;text-decoration:none;margin-bottom:1.5rem;padding:.4rem .8rem;border:1px solid var(--border);border-radius:100px}
+.back-link:hover{color:var(--fg);border-color:var(--border-light)}
+h1{font-size:clamp(1.75rem,5vw,2.5rem);font-weight:900;letter-spacing:-.02em;margin-bottom:.5rem}
+.subtitle{font-size:.95rem;color:var(--fg-dim)}
+.tabs{display:flex;gap:.5rem;margin:1.5rem 0;flex-wrap:wrap}
+.tab{padding:.6rem 1.2rem;border:1px solid var(--border);background:var(--bg-card);border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;color:var(--fg-dim);font-family:inherit;transition:all .2s}
+.tab.active{background:var(--fg);color:var(--border)}
+.class-section{margin:2rem 0;display:none}
+.class-section.active{display:block}
+.class-intro{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--class-color);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1rem}
+.class-intro h2{font-size:1.2rem;font-weight:800;margin-bottom:.4rem}
+.class-intro p{font-size:.85rem;color:var(--fg-dim);line-height:1.5}
+.entry-table{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.entry-row{display:grid;grid-template-columns:40px 60px 1fr 50px;align-items:center;gap:.5rem;padding:.7rem 1rem;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;cursor:pointer;transition:background .15s;font-size:.85rem}
+.entry-row:hover{background:var(--bg-card-hover)}
+.entry-row:last-child{border-bottom:none}
+.entry-row.header{font-size:.65rem;font-weight:700;letter-spacing:.12em;color:var(--fg-muted);text-transform:uppercase;padding:.6rem 1rem;background:rgba(255,255,255,.02);cursor:default;pointer-events:none}
+.entry-row.header:hover{background:rgba(255,255,255,.02)}
+.cell-pos{font-weight:800;font-variant-numeric:tabular-nums;font-size:.95rem}
+.cell-num{font-weight:700;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:.4rem}
+.car-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.cell-team{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cell-team-sub{font-size:.7rem;color:var(--fg-muted);margin-top:.1rem}
+.cell-crew{font-size:.7rem;color:var(--fg-dim);text-align:right}
+.footer{text-align:center;padding:2rem 1rem;color:var(--fg-muted);font-size:.75rem;border-top:1px solid var(--border);margin-top:2rem}
+.footer a{color:var(--fg-dim);text-decoration:none;margin:0 .5rem}
+@media(max-width:600px){.container{padding:0 1rem}.entry-row{grid-template-columns:30px 50px 1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <a class="back-link" href="./">← Standings</a>
+    <h1>Classes & Entries</h1>
+    <p class="subtitle">62 cars across 4 classes. Tap a car for the full deep-dive.</p>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-class="Hypercar" style="--class-color: var(--hypercar)">Hypercar (18)</button>
+    <button class="tab" data-class="LMP2" style="--class-color: var(--lmp2)">LMP2 (10)</button>
+    <button class="tab" data-class="LMP2 Pro-Am" style="--class-color: var(--lmp2-proam)">LMP2 Pro-Am (9)</button>
+    <button class="tab" data-class="LMGT3" style="--class-color: var(--lmgt3)">LMGT3 (25)</button>
+  </div>
+
+  <div id="classSections"></div>
+
+  <footer class="footer">
+    <a href="./">Standings</a>·<a href="./regulations.html">Regulations</a>·<a href="./history.html">History</a>
+  </footer>
+</div>
+
+<script>
+const CLASS_INTROS = {
+  'Hypercar': 'The top class at Le Mans. Two converging regulations: LMH (manufacturer body, hybrid) and LMDh (customer chassis, spec hybrid). All cars BoP-adjusted for equal pace. ~500 kW (680 PS), 1030 kg min weight, hybrid mandatory (except Aston Martin Valkyrie).',
+  'LMP2': 'Customer spec prototype class. Single chassis (Oreca 07), single engine (Gibson GK428 4.2L V8 NA), single tyre supplier (Goodyear). No hybrid. ~600 PS, 950 kg min. Refueling permitted.',
+  'LMP2 Pro-Am': 'Sub-class of LMP2 that requires a Bronze-rated (gentleman) driver in the lineup. Same car, same spec, separate classification.',
+  'LMGT3': 'GT3-based multi-marque class. Replaced LMGTE in 2024. 9 manufacturers in 2026: Aston Martin, BMW, Chevrolet, Ferrari, Ford, Lexus, McLaren, Mercedes-AMG, Porsche. Class-wide BoP.'
+};
+
+(async () => {
+  const el = await fetch('./data/entry-list.json').then(r => r.json());
+  const sections = document.getElementById('classSections');
+
+  const ordered = ['Hypercar', 'LMP2', 'LMP2 Pro-Am', 'LMGT3'];
+  const colorMap = {'Hypercar':'var(--hypercar)','LMP2':'var(--lmp2)','LMP2 Pro-Am':'var(--lmp2-proam)','LMGT3':'var(--lmgt3)'};
+
+  sections.innerHTML = ordered.map(cls => {
+    const arr = el.cars.filter(c => c.class === cls);
+    return `
+      <div class="class-section ${cls === 'Hypercar' ? 'active' : ''}" data-class="${cls}" style="--class-color: ${colorMap[cls]}">
+        <div class="class-intro">
+          <h2>${cls}</h2>
+          <p>${CLASS_INTROS[cls]}</p>
+        </div>
+        <div class="entry-table">
+          <div class="entry-row header">
+            <div>Grid</div>
+            <div>Car #</div>
+            <div>Team / Car</div>
+            <div style="text-align:right">Crew</div>
+          </div>
+          ${arr.map(c => `
+            <a class="entry-row" href="./car.html?car=${encodeURIComponent(c.car_number)}">
+              <div class="cell-pos">${c.grid_pos || '—'}</div>
+              <div class="cell-num">
+                <span class="car-dot" style="background:${c.livery_color}"></span>
+                ${c.car_number}
+              </div>
+              <div class="cell-team">
+                ${c.team}
+                <div class="cell-team-sub">${c.car || ''}</div>
+              </div>
+              <div class="cell-crew">${c.crew_count}/3</div>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Tab switching
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const cls = tab.dataset.class;
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelectorAll('.class-section').forEach(s => s.classList.remove('active'));
+      document.querySelector(`.class-section[data-class="${cls}"]`).classList.add('active');
+    });
+  });
+})();
+</script>
+</body>
+</html>

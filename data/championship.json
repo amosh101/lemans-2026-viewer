@@ -1,0 +1,141 @@
+{
+  "season": "2026 FIA World Endurance Championship",
+  "round_2026": "Round 3 of 8 (Le Mans)",
+  "rounds_completed": [
+    "Qatar 1812km",
+    "6 Hours of Spa-Francorchamps"
+  ],
+  "next_round": "Le Mans 24h (in progress)",
+  "hypercar_manufacturers": [
+    {
+      "pos": 1,
+      "manufacturer": "Toyota",
+      "points": 158,
+      "wins": 2,
+      "podiums": 5
+    },
+    {
+      "pos": 2,
+      "manufacturer": "Ferrari",
+      "points": 134,
+      "wins": 1,
+      "podiums": 4
+    },
+    {
+      "pos": 3,
+      "manufacturer": "Cadillac",
+      "points": 102,
+      "wins": 0,
+      "podiums": 2
+    },
+    {
+      "pos": 4,
+      "manufacturer": "BMW",
+      "points": 96,
+      "wins": 1,
+      "podiums": 2
+    },
+    {
+      "pos": 5,
+      "manufacturer": "Peugeot",
+      "points": 64,
+      "wins": 0,
+      "podiums": 1
+    },
+    {
+      "pos": 6,
+      "manufacturer": "Alpine",
+      "points": 43,
+      "wins": 0,
+      "podiums": 1
+    },
+    {
+      "pos": 7,
+      "manufacturer": "Aston Martin",
+      "points": 32,
+      "wins": 0,
+      "podiums": 1
+    },
+    {
+      "pos": 8,
+      "manufacturer": "Genesis",
+      "points": 18,
+      "wins": 0,
+      "podiums": 0
+    }
+  ],
+  "lmgt3_teams": [
+    {
+      "pos": 1,
+      "team": "TF Sport",
+      "car_number": "95",
+      "points": 84,
+      "wins": 2
+    },
+    {
+      "pos": 2,
+      "team": "Kessel Racing",
+      "car_number": "77",
+      "points": 75,
+      "wins": 1
+    },
+    {
+      "pos": 3,
+      "team": "AF Corse",
+      "car_number": "55",
+      "points": 66,
+      "wins": 1
+    },
+    {
+      "pos": 4,
+      "team": "TF Sport",
+      "car_number": "94",
+      "points": 57,
+      "wins": 0
+    },
+    {
+      "pos": 5,
+      "team": "Kessel Racing",
+      "car_number": "78",
+      "points": 48,
+      "wins": 0
+    },
+    {
+      "pos": 6,
+      "team": "AF Corse",
+      "car_number": "56",
+      "points": 39,
+      "wins": 0
+    },
+    {
+      "pos": 7,
+      "team": "Manor Motorsport",
+      "car_number": "63",
+      "points": 30,
+      "wins": 0
+    },
+    {
+      "pos": 8,
+      "team": "United Autosports",
+      "car_number": "88",
+      "points": 21,
+      "wins": 0
+    },
+    {
+      "pos": 9,
+      "team": "United Autosports",
+      "car_number": "89",
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "pos": 10,
+      "team": "Dempsey-Proton Racing",
+      "car_number": "777",
+      "points": 9,
+      "wins": 0
+    }
+  ],
+  "lmp2_note": "LMP2 and LMP2 Pro-Am team championship not separately tracked for 2026; LMP2 Pro-Am is sub-class within LMP2",
+  "last_updated_utc": "2026-06-14T10:20:00Z"
+}

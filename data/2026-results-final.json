@@ -1,0 +1,214 @@
+{
+  "timestamp": "2026-06-19T11:38:32.651202",
+  "source": "mock",
+  "overall": [
+    {
+      "position": 1,
+      "car_number": "15",
+      "team": "BMW Team Schnitzer",
+      "drivers": [
+        "Kevin Magnussen",
+        "Dries Vanthoor",
+        "Marco Wittmann"
+      ],
+      "laps": 342,
+      "distance": "5814.0 km",
+      "avg_speed": "242.25 km/h"
+    },
+    {
+      "position": 2,
+      "car_number": "8",
+      "team": "Toyota Gazoo Racing",
+      "drivers": [
+        "S\u00e9bastien Buemi",
+        "Brendon Hartley",
+        "Ry\u014d Hirakawa"
+      ],
+      "laps": 341,
+      "distance": "5797.0 km",
+      "avg_speed": "241.54 km/h"
+    },
+    {
+      "position": 3,
+      "car_number": "50",
+      "team": "AF Corse",
+      "drivers": [
+        "Antonio Fuoco",
+        "Miguel Molina",
+        "Nicklas Nielsen"
+      ],
+      "laps": 340,
+      "distance": "5780.0 km",
+      "avg_speed": "240.83 km/h"
+    },
+    {
+      "position": 4,
+      "car_number": "38",
+      "team": "Cadillac Racing",
+      "drivers": [
+        "Earl Bamber",
+        "Alex Lynn",
+        "S\u00e9bastien Bourdais"
+      ],
+      "laps": 339,
+      "distance": "5763.0 km",
+      "avg_speed": "240.12 km/h"
+    },
+    {
+      "position": 5,
+      "car_number": "94",
+      "team": "Peugeot TotalEnergies",
+      "drivers": [
+        "Lo\u00efc Duval",
+        "Mikkel Jensen",
+        "Gustavo Menezes"
+      ],
+      "laps": 338,
+      "distance": "5746.0 km",
+      "avg_speed": "239.41 km/h"
+    }
+  ],
+  "hypercar": [
+    {
+      "position": 1,
+      "car_number": "15",
+      "team": "BMW Team Schnitzer",
+      "drivers": [
+        "Kevin Magnussen",
+        "Dries Vanthoor",
+        "Marco Wittmann"
+      ],
+      "laps": 342,
+      "distance": "5814.0 km",
+      "avg_speed": "242.25 km/h"
+    },
+    {
+      "position": 2,
+      "car_number": "8",
+      "team": "Toyota Gazoo Racing",
+      "drivers": [
+        "S\u00e9bastien Buemi",
+        "Brendon Hartley",
+        "Ry\u014d Hirakawa"
+      ],
+      "laps": 341,
+      "distance": "5797.0 km",
+      "avg_speed": "241.54 km/h"
+    },
+    {
+      "position": 3,
+      "car_number": "50",
+      "team": "AF Corse",
+      "drivers": [
+        "Antonio Fuoco",
+        "Miguel Molina",
+        "Nicklas Nielsen"
+      ],
+      "laps": 340,
+      "distance": "5780.0 km",
+      "avg_speed": "240.83 km/h"
+    }
+  ],
+  "lmp2": [
+    {
+      "position": 1,
+      "car_number": "92",
+      "team": "United Autosports",
+      "drivers": [
+        "Will Stevens",
+        "Filipe Albuquerque",
+        "Paul di Resta"
+      ],
+      "laps": 335,
+      "distance": "5695.0 km",
+      "avg_speed": "237.29 km/h"
+    },
+    {
+      "position": 2,
+      "car_number": "2",
+      "team": "Inter Europol Competition",
+      "drivers": [
+        "Martin Hippe",
+        "Marek Dabrowski",
+        "Nicolas Daponte"
+      ],
+      "laps": 334,
+      "distance": "5678.0 km",
+      "avg_speed": "236.58 km/h"
+    }
+  ],
+  "lmgt3": [
+    {
+      "position": 1,
+      "car_number": "25",
+      "team": "AF Corse",
+      "drivers": [
+        "Alessandro Pier Guidi",
+        "James Calado",
+        "Antonio Giovinazzi"
+      ],
+      "laps": 330,
+      "distance": "5610.0 km",
+      "avg_speed": "233.75 km/h"
+    },
+    {
+      "position": 2,
+      "car_number": "44",
+      "team": "Ferrari AF Corse",
+      "drivers": [
+        "Davide Rigon",
+        "Miguel Molina",
+        "Sam Bird"
+      ],
+      "laps": 329,
+      "distance": "5593.0 km",
+      "avg_speed": "233.04 km/h"
+    }
+  ],
+  "fastest_laps": {
+    "overall": {
+      "car_number": "15",
+      "driver": "Dries Vanthoor",
+      "time": "3:22.564",
+      "lap": 123
+    },
+    "hypercar": {
+      "car_number": "15",
+      "driver": "Dries Vanthoor",
+      "time": "3:22.564",
+      "lap": 123
+    },
+    "lmp2": {
+      "car_number": "92",
+      "driver": "Paul di Resta",
+      "time": "3:35.123",
+      "lap": 89
+    },
+    "lmgt3": {
+      "car_number": "25",
+      "driver": "Alessandro Pier Guidi",
+      "time": "3:45.678",
+      "lap": 210
+    }
+  },
+  "retirements": [
+    {
+      "car_number": "7",
+      "team": "Toyota Gazoo Racing",
+      "reason": "Engine failure",
+      "lap": 200
+    },
+    {
+      "car_number": "93",
+      "team": "Peugeot TotalEnergies",
+      "reason": "Accident",
+      "lap": 150
+    },
+    {
+      "car_number": "51",
+      "team": "AF Corse",
+      "reason": "Electrical",
+      "lap": 100
+    }
+  ]
+}

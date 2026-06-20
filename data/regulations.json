@@ -1,0 +1,134 @@
+{
+  "summary": "The 2026 Le Mans Hypercar class uses two converging regulations: LMH (Le Mans Hypercar) and LMDh (Le Mans Daytona h). Both produce similar lap times but use different technical pathways. LMH is manufacturer-developed; LMDh uses a spec hybrid from common suppliers and a customer chassis.",
+  "lmh": {
+    "name": "Le Mans Hypercar",
+    "since": 2021,
+    "developed_by": "ACO + FIA",
+    "philosophy": "Manufacturer freedom — each car maker designs chassis, body, engine, and hybrid (or no hybrid)",
+    "min_weight_kg": 1030,
+    "max_power_kw": 520,
+    "hybrid": "Optional — front-axle MGU deploying energy from battery (if equipped)",
+    "battery": "If hybrid: spec battery, MGU-K, inverter from Williams Advanced Engineering or common supplier",
+    "engine": "Free choice — typically 2.6L V6 or 3.5L V8, turbo or twin-turbo hybrid",
+    "chassis": "Manufacturer-designed carbon fiber monocoque",
+    "bodywork": "Manufacturer-designed (free)",
+    "front_axle": "Free (designed by manufacturer)",
+    "rear_axle": "Free",
+    "examples": [
+      {"name": "Toyota GR010 Hybrid", "engine": "3.5L V6 twin-turbo", "hybrid": "yes", "team": "Toyota Racing"},
+      {"name": "Ferrari 499P", "engine": "3.0L V6 twin-turbo", "hybrid": "yes", "team": "Ferrari AF Corse"},
+      {"name": "Peugeot 9X8", "engine": "2.6L V6 twin-turbo", "hybrid": "yes", "team": "Peugeot TotalEnergies"},
+      {"name": "Alpine A424", "engine": "3.4L V6 twin-turbo", "hybrid": "yes", "team": "Alpine Endurance Team"},
+      {"name": "Aston Martin Valkyrie", "engine": "6.5L V12 NA", "hybrid": "no (KERS removed for WEC 2025)", "team": "Aston Martin THOR Team"},
+      {"name": "Cadillac V-Series.R", "engine": "5.5L V8 twin-turbo (modified LMP2-class unit)", "hybrid": "yes", "team": "Cadillac Hertz Team Jota / Cadillac WTR"},
+      {"name": "Genesis GMR-001", "engine": "modified LMP2-class unit + hybrid", "hybrid": "yes", "team": "Genesis Magma Racing"},
+      {"name": "BMW M Hybrid V8", "engine": "modified LMP2-class unit + hybrid", "hybrid": "yes", "team": "BMW M Team WRT"}
+    ]
+  },
+  "lmdh": {
+    "name": "Le Mans Daytona h",
+    "since": 2023,
+    "developed_by": "ACO + FIA + IMSA",
+    "philosophy": "Customer chassis + spec hybrid + free engine. Cheaper to enter than LMH.",
+    "min_weight_kg": 1030,
+    "max_power_kw": 520,
+    "hybrid": "Mandatory — spec hybrid from common supplier (Bosch, Williams Advanced Engineering, or Xtrac)",
+    "battery": "Spec — common across all LMDh cars",
+    "engine": "Free choice of customer engine (typically derived from GT or LMP2 production)",
+    "chassis": "One of four customer chassis: Dallara, Multimatic, Oreca, or Riley",
+    "bodywork": "Manufacturer-designed (free — unlike spec chassis)",
+    "front_axle": "Spec (one of the four chassis suppliers)",
+    "rear_axle": "Spec",
+    "examples": [
+      {"name": "Porsche 963", "chassis": "Multimatic", "engine": "4.6L V8 biturbo (modified 918 Spyder unit)", "team": "Porsche Penske Motorsport"},
+      {"name": "Acura ARX-06", "chassis": "Oreca", "engine": "2.4L I6 turbo (modified)", "team": "Wayne Taylor Racing / Meyer Shank"},
+      {"name": "Cadillac V-Series.R", "chassis": "Dallara", "engine": "5.5L V8 (modified)", "team": "Cadillac Racing (IMSA, not WEC — but shares LMH-spec body)"},
+      {"name": "BMW M Hybrid V8", "chassis": "Dallara", "engine": "modified LMP2 unit", "team": "BMW M Team RLL (IMSA)"},
+      {"name": "Audi RS 6 e-tron GT (concept)", "chassis": "TBA", "engine": "TBA", "team": "Audi (rumored 2027 entry)"}
+    ],
+    "note": "Some Hypercar entries are technically LMH (manufacturer body) and others LMDh (customer body), but FIA classifies them all as 'Hypercar' and balances them with BoP."
+  },
+  "bop_explained": {
+    "name": "Balance of Performance",
+    "purpose": "Equalise lap times between LMH and LMDh cars (and between manufacturers within each)",
+    "what_is_adjusted": [
+      "Minimum weight (typically ±20-50 kg per car)",
+      "Maximum power output (typically ±10-30 kW)",
+      "Hybrid deployment energy per lap (MegaJoules)",
+      "Fuel/energy allocation per stint",
+      "Refueling rate (if applicable)"
+    ],
+    "when_set": "Adjusted before each WEC round, and during the 24h of Le Mans via mid-race bulletins",
+    "2026_specifics": "BoP table released 2 weeks before each round. Mid-race changes possible if a car shows a clear pace advantage."
+  },
+  "lmp2": {
+    "name": "Le Mans Prototype 2",
+    "since": 2017,
+    "philosophy": "Customer spec — single chassis, single engine, single tyre supplier (Goodyear)",
+    "chassis": "Oreca 07 (all teams)",
+    "engine": "Gibson GK428 4.2L V8 NA (spec, ~600 hp)",
+    "min_weight_kg": 950,
+    "max_power_kw": 440,
+    "hybrid": "No",
+    "refueling": "Yes (vs LMH/LMDh which use spec refueling equipment)",
+    "pro_am_rules": "LMP2 Pro-Am: must include at least one Bronze-rated driver per FIA driver categorisation",
+    "examples": [
+      {"name": "Oreca 07 - Gibson", "team": "all LMP2 entries"}
+    ]
+  },
+  "lmgt3": {
+    "name": "Le Mans Grand Touring 3",
+    "since": 2024,
+    "philosophy": "GT3-based, BoP-adjusted, multi-marque",
+    "chassis": "Customer — various GT3 homologated chassis from major manufacturers",
+    "marques_2026": ["Aston Martin", "BMW", "Chevrolet", "Ferrari", "Ford", "Lexus", "McLaren", "Mercedes-AMG", "Porsche"],
+    "examples_2026": [
+      {"marque": "Aston Martin", "car": "Vantage AMR GT3 Evo"},
+      {"marque": "BMW", "car": "M4 GT3 Evo"},
+      {"marque": "Chevrolet", "car": "Corvette Z06 GT3.R"},
+      {"marque": "Ferrari", "car": "296 GT3 Evo"},
+      {"marque": "Ford", "car": "Mustang GT3 Evo"},
+      {"marque": "Lexus", "car": "RC F GT3"},
+      {"marque": "McLaren", "car": "720S GT3 Evo"},
+      {"marque": "Mercedes-AMG", "car": "GT3 Evo"},
+      {"marque": "Porsche", "car": "911 GT3 R (992.2)"}
+    ],
+    "min_weight_kg": 1300,
+    "max_power_kw": 415,
+    "tyres": "Goodyear (spec) — free compound choice per stint"
+  },
+  "race_format": {
+    "duration_hours": 24,
+    "start": "Rolling start (since 1971) or Le Mans start (running to cars) — currently rolling start",
+    "stints": "Drivers typically do double stints (3-4 hours per stint), no individual driver limit",
+    "min_drivers": 2,
+    "max_drivers": 3,
+    "min_driving_time": "Each driver must drive at least 6 hours total (per driver pair/trio)",
+    "pit_stops": "Unlimited — refueling, tyre change, driver change",
+    "fuel": "Spec fuel, single supplier per round",
+    "safety_cars": "Used in heavy incidents, neutralizes whole field"
+  },
+  "key_2026_changes": [
+    {
+      "category": "aero",
+      "change": "New front splitter regulations for LMP2 (reduced downforce to address safety concerns)",
+      "reason": "Reduce high-speed crash risk at Tertre Rouge and Porsche Curves"
+    },
+    {
+      "category": "hybrid",
+      "change": "Increased hybrid deployment budget for LMDh cars (was 5 MJ/lap, now 6 MJ/lap)",
+      "reason": "Allow LMDh to better match LMH pace under low-fuel conditions"
+    },
+    {
+      "category": "sporting",
+      "change": "Minimum driving time per Bronze-rated driver reduced from 6h to 4h in LMP2 Pro-Am",
+      "reason": "Make Pro-Am class more accessible to gentleman drivers"
+    },
+    {
+      "category": "safety",
+      "change": "New LED rain light system on all classes (mandatory 2026)",
+      "reason": "Visibility in spray at night"
+    }
+  ],
+  "data_sources": ["Wikipedia: Le Mans Hypercar", "Wikipedia: LMDh", "Wikipedia: 2026 FIA WEC", "FIA WEC 2026 Sporting Regulations"]
+}

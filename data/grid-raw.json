@@ -1,0 +1,612 @@
+[
+  {
+    "pos": 1,
+    "class": "Hypercar",
+    "car_number": "15",
+    "team": "BMW M Team WRT",
+    "qualifying": "3:23.625",
+    "hyperpole_1": "3:23.280",
+    "hyperpole_2": "3:22.564",
+    "grid": "1"
+  },
+  {
+    "pos": 2,
+    "class": "Hypercar",
+    "car_number": "12",
+    "team": "Cadillac Hertz Team Jota",
+    "qualifying": "3:23.148",
+    "hyperpole_1": "3:23.728",
+    "hyperpole_2": "3:23.078 1",
+    "grid": "2"
+  },
+  {
+    "pos": 3,
+    "class": "Hypercar",
+    "car_number": "35",
+    "team": "Alpine Endurance Team",
+    "qualifying": "3:23.135",
+    "hyperpole_1": "3:23.018",
+    "hyperpole_2": "3:23.620",
+    "grid": "3"
+  },
+  {
+    "pos": 4,
+    "class": "Hypercar",
+    "car_number": "20",
+    "team": "BMW M Team WRT",
+    "qualifying": "3:23.444",
+    "hyperpole_1": "3:23.246",
+    "hyperpole_2": "3:23.764",
+    "grid": "4"
+  },
+  {
+    "pos": 5,
+    "class": "Hypercar",
+    "car_number": "101",
+    "team": "Cadillac WTR",
+    "qualifying": "3:23.323",
+    "hyperpole_1": "3:23.191",
+    "hyperpole_2": "3:23.778",
+    "grid": "5"
+  },
+  {
+    "pos": 6,
+    "class": "Hypercar",
+    "car_number": "19",
+    "team": "Genesis Magma Racing",
+    "qualifying": "3:24.084",
+    "hyperpole_1": "3:23.643",
+    "hyperpole_2": "3:23.823",
+    "grid": "6"
+  },
+  {
+    "pos": 7,
+    "class": "Hypercar",
+    "car_number": "009",
+    "team": "Aston Martin THOR Team",
+    "qualifying": "3:23.777",
+    "hyperpole_1": "3:23.991",
+    "hyperpole_2": "3:24.729",
+    "grid": "7"
+  },
+  {
+    "pos": 8,
+    "class": "Hypercar",
+    "car_number": "51",
+    "team": "Ferrari AF Corse",
+    "qualifying": "3:24.623",
+    "hyperpole_1": "3:23.406",
+    "hyperpole_2": "3:25.081",
+    "grid": "8"
+  },
+  {
+    "pos": 9,
+    "class": "Hypercar",
+    "car_number": "17",
+    "team": "Genesis Magma Racing",
+    "qualifying": "3:24.424",
+    "hyperpole_1": "3:23.126",
+    "hyperpole_2": "3:26.116",
+    "grid": "9"
+  },
+  {
+    "pos": 10,
+    "class": "Hypercar",
+    "car_number": "38",
+    "team": "Cadillac Hertz Team Jota",
+    "qualifying": "3:23.485",
+    "hyperpole_1": "3:23.091",
+    "hyperpole_2": "3:26.865",
+    "grid": "10"
+  },
+  {
+    "pos": 11,
+    "class": "Hypercar",
+    "car_number": "007",
+    "team": "Aston Martin THOR Team",
+    "qualifying": "3:23.906",
+    "hyperpole_1": "3:24.004",
+    "hyperpole_2": "",
+    "grid": "11"
+  },
+  {
+    "pos": 12,
+    "class": "Hypercar",
+    "car_number": "50",
+    "team": "Ferrari AF Corse",
+    "qualifying": "3:24.514",
+    "hyperpole_1": "3:24.105",
+    "hyperpole_2": "",
+    "grid": "12"
+  },
+  {
+    "pos": 13,
+    "class": "Hypercar",
+    "car_number": "36",
+    "team": "Alpine Endurance Team",
+    "qualifying": "3:23.960",
+    "hyperpole_1": "3:24.122",
+    "hyperpole_2": "",
+    "grid": "13"
+  },
+  {
+    "pos": 14,
+    "class": "Hypercar",
+    "car_number": "7",
+    "team": "Toyota Racing",
+    "qualifying": "3:24.314",
+    "hyperpole_1": "3:24.268",
+    "hyperpole_2": "",
+    "grid": "14"
+  },
+  {
+    "pos": 15,
+    "class": "Hypercar",
+    "car_number": "8",
+    "team": "Toyota Racing",
+    "qualifying": "3:23.791",
+    "hyperpole_1": "3:24.578",
+    "hyperpole_2": "",
+    "grid": "15"
+  },
+  {
+    "pos": 16,
+    "class": "Hypercar",
+    "car_number": "93",
+    "team": "Peugeot TotalEnergies",
+    "qualifying": "3:24.978",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "16"
+  },
+  {
+    "pos": 17,
+    "class": "Hypercar",
+    "car_number": "83",
+    "team": "AF Corse",
+    "qualifying": "3:25.495",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "17"
+  },
+  {
+    "pos": 18,
+    "class": "Hypercar",
+    "car_number": "94",
+    "team": "Peugeot TotalEnergies",
+    "qualifying": "3:25.660",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "18"
+  },
+  {
+    "pos": 19,
+    "class": "LMP2",
+    "car_number": "29",
+    "team": "Forestier Racing by Panis",
+    "qualifying": "3:36.098",
+    "hyperpole_1": "3:34.108",
+    "hyperpole_2": "3:32.855",
+    "grid": "20"
+  },
+  {
+    "pos": 20,
+    "class": "LMP2",
+    "car_number": "28",
+    "team": "IDEC Sport",
+    "qualifying": "3:37.725",
+    "hyperpole_1": "3:34.612",
+    "hyperpole_2": "3:33.242",
+    "grid": "19"
+  },
+  {
+    "pos": 21,
+    "class": "LMP2",
+    "car_number": "24",
+    "team": "Nielsen Racing",
+    "qualifying": "3:37.665",
+    "hyperpole_1": "3:35.140",
+    "hyperpole_2": "3:33.510",
+    "grid": "21"
+  },
+  {
+    "pos": 22,
+    "class": "LMP2",
+    "car_number": "43",
+    "team": "Inter Europol Competition",
+    "qualifying": "3:37.004",
+    "hyperpole_1": "3:33.762",
+    "hyperpole_2": "3:33.578",
+    "grid": "22"
+  },
+  {
+    "pos": 23,
+    "class": "LMP2 Pro-Am",
+    "car_number": "4",
+    "team": "CrowdStrike Racing by APR",
+    "qualifying": "3:39.369",
+    "hyperpole_1": "3:33.889",
+    "hyperpole_2": "3:33.628",
+    "grid": "23"
+  },
+  {
+    "pos": 24,
+    "class": "LMP2",
+    "car_number": "30",
+    "team": "Duqueine Team",
+    "qualifying": "3:34.662",
+    "hyperpole_1": "3:34.813",
+    "hyperpole_2": "3:33.702",
+    "grid": "24"
+  },
+  {
+    "pos": 25,
+    "class": "LMP2 Pro-Am",
+    "car_number": "14",
+    "team": "TDS Racing",
+    "qualifying": "3:40.264",
+    "hyperpole_1": "3:34.542",
+    "hyperpole_2": "3:33.715",
+    "grid": "25"
+  },
+  {
+    "pos": 26,
+    "class": "LMP2 Pro-Am",
+    "car_number": "99",
+    "team": "AO by TF",
+    "qualifying": "3:38.698",
+    "hyperpole_1": "3:34.845",
+    "hyperpole_2": "3:34.280",
+    "grid": "26"
+  },
+  {
+    "pos": 27,
+    "class": "LMP2 Pro-Am",
+    "car_number": "183",
+    "team": "AF Corse",
+    "qualifying": "3:39.985",
+    "hyperpole_1": "3:34.789",
+    "hyperpole_2": "3:34.692",
+    "grid": "27"
+  },
+  {
+    "pos": 28,
+    "class": "LMP2",
+    "car_number": "343",
+    "team": "Inter Europol Competition",
+    "qualifying": "3:35.247",
+    "hyperpole_1": "3:34.179",
+    "hyperpole_2": "3:35.038",
+    "grid": "28"
+  },
+  {
+    "pos": 29,
+    "class": "LMP2",
+    "car_number": "22",
+    "team": "United Autosports",
+    "qualifying": "3:37.564",
+    "hyperpole_1": "3:35.510",
+    "hyperpole_2": "",
+    "grid": "29"
+  },
+  {
+    "pos": 30,
+    "class": "LMP2 Pro-Am",
+    "car_number": "222",
+    "team": "United Autosports",
+    "qualifying": "3:41.418",
+    "hyperpole_1": "3:35.688",
+    "hyperpole_2": "",
+    "grid": "30"
+  },
+  {
+    "pos": 31,
+    "class": "LMP2",
+    "car_number": "26",
+    "team": "Vector Sport",
+    "qualifying": "3:36.555",
+    "hyperpole_1": "3:35.982",
+    "hyperpole_2": "",
+    "grid": "31"
+  },
+  {
+    "pos": 32,
+    "class": "LMP2",
+    "car_number": "37",
+    "team": "CLX Motorsport",
+    "qualifying": "3:35.229",
+    "hyperpole_1": "3:37.419",
+    "hyperpole_2": "",
+    "grid": "32"
+  },
+  {
+    "pos": 33,
+    "class": "LMP2",
+    "car_number": "9",
+    "team": "Proton Competition",
+    "qualifying": "3:38.088",
+    "hyperpole_1": "3:44.697",
+    "hyperpole_2": "",
+    "grid": "33"
+  },
+  {
+    "pos": 34,
+    "class": "LMP2 Pro-Am",
+    "car_number": "44",
+    "team": "Proton Competition",
+    "qualifying": "3:41.453",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "34"
+  },
+  {
+    "pos": 35,
+    "class": "LMP2 Pro-Am",
+    "car_number": "25",
+    "team": "Algarve Pro Racing",
+    "qualifying": "3:42.739",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "35"
+  },
+  {
+    "pos": 36,
+    "class": "LMP2 Pro-Am",
+    "car_number": "48",
+    "team": "RD Limited",
+    "qualifying": "3:42.856",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "36"
+  },
+  {
+    "pos": 37,
+    "class": "LMP2 Pro-Am",
+    "car_number": "3",
+    "team": "DKR Engineering",
+    "qualifying": "3:43.551",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "37"
+  },
+  {
+    "pos": 38,
+    "class": "LMGT3",
+    "car_number": "27",
+    "team": "Heart of Racing Team",
+    "qualifying": "3:56.688",
+    "hyperpole_1": "3:53.166",
+    "hyperpole_2": "3:52.433",
+    "grid": "38"
+  },
+  {
+    "pos": 39,
+    "class": "LMGT3",
+    "car_number": "21",
+    "team": "Vista AF Corse",
+    "qualifying": "3:56.962",
+    "hyperpole_1": "3:54.652",
+    "hyperpole_2": "3:53.412",
+    "grid": "39"
+  },
+  {
+    "pos": 40,
+    "class": "LMGT3",
+    "car_number": "87",
+    "team": "Akkodis ASP Team",
+    "qualifying": "3:56.581",
+    "hyperpole_1": "3:54.495",
+    "hyperpole_2": "3:53.614",
+    "grid": "40"
+  },
+  {
+    "pos": 41,
+    "class": "LMGT3",
+    "car_number": "78",
+    "team": "Akkodis ASP Team",
+    "qualifying": "3:57.261",
+    "hyperpole_1": "3:54.340",
+    "hyperpole_2": "3:53.869",
+    "grid": "41"
+  },
+  {
+    "pos": 42,
+    "class": "LMGT3",
+    "car_number": "32",
+    "team": "Team WRT",
+    "qualifying": "3:56.537",
+    "hyperpole_1": "3:53.337",
+    "hyperpole_2": "3:54.401",
+    "grid": "42"
+  },
+  {
+    "pos": 43,
+    "class": "LMGT3",
+    "car_number": "69",
+    "team": "Team WRT",
+    "qualifying": "3:56.700",
+    "hyperpole_1": "3:54.699",
+    "hyperpole_2": "3:54.655",
+    "grid": "43"
+  },
+  {
+    "pos": 44,
+    "class": "LMGT3",
+    "car_number": "74",
+    "team": "Kessel Racing",
+    "qualifying": "3:56.560",
+    "hyperpole_1": "3:54.665",
+    "hyperpole_2": "3:54.677",
+    "grid": "44"
+  },
+  {
+    "pos": 45,
+    "class": "LMGT3",
+    "car_number": "23",
+    "team": "Heart of Racing Team",
+    "qualifying": "3:55.975",
+    "hyperpole_1": "3:53.723",
+    "hyperpole_2": "3:54.888",
+    "grid": "45"
+  },
+  {
+    "pos": 46,
+    "class": "LMGT3",
+    "car_number": "91",
+    "team": "Manthey DK Engineering",
+    "qualifying": "3:56.183",
+    "hyperpole_1": "3:53.561",
+    "hyperpole_2": "3:55.610",
+    "grid": "46"
+  },
+  {
+    "pos": 47,
+    "class": "LMGT3",
+    "car_number": "77",
+    "team": "Proton Competition",
+    "qualifying": "3:55.951",
+    "hyperpole_1": "3:54.528",
+    "hyperpole_2": "3:55.666",
+    "grid": "47"
+  },
+  {
+    "pos": 48,
+    "class": "LMGT3",
+    "car_number": "88",
+    "team": "Proton Competition",
+    "qualifying": "3:56.931",
+    "hyperpole_1": "3:54.753",
+    "hyperpole_2": "",
+    "grid": "48"
+  },
+  {
+    "pos": 49,
+    "class": "LMGT3",
+    "car_number": "62",
+    "team": "Team Qatar by Iron Lynx",
+    "qualifying": "3:57.531",
+    "hyperpole_1": "3:54.771",
+    "hyperpole_2": "",
+    "grid": "49"
+  },
+  {
+    "pos": 50,
+    "class": "LMGT3",
+    "car_number": "61",
+    "team": "Iron Lynx",
+    "qualifying": "3:56.950",
+    "hyperpole_1": "3:55.003",
+    "hyperpole_2": "",
+    "grid": "50"
+  },
+  {
+    "pos": 51,
+    "class": "LMGT3",
+    "car_number": "54",
+    "team": "Vista AF Corse",
+    "qualifying": "3:57.277",
+    "hyperpole_1": "3:55.175",
+    "hyperpole_2": "",
+    "grid": "51"
+  },
+  {
+    "pos": 52,
+    "class": "LMGT3",
+    "car_number": "92",
+    "team": "The Bend Manthey",
+    "qualifying": "3:57.466",
+    "hyperpole_1": "3:55.314",
+    "hyperpole_2": "",
+    "grid": "52"
+  },
+  {
+    "pos": 53,
+    "class": "LMGT3",
+    "car_number": "10",
+    "team": "Garage 59",
+    "qualifying": "3:57.662",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "53"
+  },
+  {
+    "pos": 54,
+    "class": "LMGT3",
+    "car_number": "33",
+    "team": "TF Sport",
+    "qualifying": "3:57.724",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "54"
+  },
+  {
+    "pos": 55,
+    "class": "LMGT3",
+    "car_number": "79",
+    "team": "Iron Lynx",
+    "qualifying": "3:57.776",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "55"
+  },
+  {
+    "pos": 56,
+    "class": "LMGT3",
+    "car_number": "150",
+    "team": "Richard Mille AF Corse",
+    "qualifying": "3:57.991",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "56"
+  },
+  {
+    "pos": 57,
+    "class": "LMGT3",
+    "car_number": "57",
+    "team": "Kessel Racing",
+    "qualifying": "3:58.109",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "57"
+  },
+  {
+    "pos": 58,
+    "class": "LMGT3",
+    "car_number": "59",
+    "team": "Racing Spirit of L\u00e9man",
+    "qualifying": "3:58.395",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "58"
+  },
+  {
+    "pos": 59,
+    "class": "LMGT3",
+    "car_number": "58",
+    "team": "Garage 59",
+    "qualifying": "3:59.352",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "59"
+  },
+  {
+    "pos": 60,
+    "class": "LMGT3",
+    "car_number": "2",
+    "team": "TF Sport",
+    "qualifying": "3:59.592",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "60"
+  },
+  {
+    "pos": 61,
+    "class": "LMGT3",
+    "car_number": "13",
+    "team": "13 Autosport",
+    "qualifying": "4:00.258",
+    "hyperpole_1": "",
+    "hyperpole_2": "",
+    "grid": "61"
+  }
+]

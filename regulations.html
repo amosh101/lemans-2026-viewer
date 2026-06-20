@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulations — 24H Le Mans 2026</title>
+<meta name="theme-color" content="#000000">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--bg-card:#111;--border:#1f1f1f;--border-light:#2a2a2a;--fg:#f0f0fa;--fg-dim:#a0a0b0;--fg-muted:#6b6b7b;--accent:#dc2626;--hypercar:#dc2626;--lmp2:#2563eb;--lmp2-proam:#7c3aed;--lmgt3:#16a34a;}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--fg);font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100vh;padding-bottom:4rem;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.hero{padding:3rem 0 1.5rem;border-bottom:1px solid var(--border)}
+.back-link{display:inline-block;font-size:.75rem;font-weight:600;color:var(--fg-muted);text-transform:uppercase;letter-spacing:.12em;text-decoration:none;margin-bottom:1.5rem;padding:.4rem .8rem;border:1px solid var(--border);border-radius:100px}
+.back-link:hover{color:var(--fg);border-color:var(--border-light)}
+h1{font-size:clamp(1.75rem,5vw,2.5rem);font-weight:900;letter-spacing:-.02em;margin-bottom:.5rem}
+.subtitle{font-size:.95rem;color:var(--fg-dim);line-height:1.5;max-width:700px}
+.section{padding:2rem 0}
+.section-title{font-size:.7rem;font-weight:700;letter-spacing:.18em;color:var(--fg-muted);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.section-title::before{content:'';width:4px;height:14px;background:var(--accent);border-radius:2px}
+.callout{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+.callout p{font-size:.9rem;line-height:1.6;color:var(--fg-dim)}
+.callout strong{color:var(--fg)}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+@media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+.compare-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem}
+.compare-card h3{font-size:1.1rem;font-weight:800;margin-bottom:.4rem}
+.compare-card .sub{font-size:.75rem;color:var(--fg-muted);margin-bottom:1rem;letter-spacing:.05em}
+.compare-card .row{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.85rem;align-items:flex-start}
+.compare-card .row:last-child{border-bottom:none}
+.compare-card .row .k{color:var(--fg-muted);font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;flex-shrink:0;margin-right:1rem}
+.compare-card .row .v{text-align:right;font-weight:500;max-width:60%}
+.spec-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:1.5rem}
+.spec-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem;border-left:2px solid var(--border-light)}
+.spec-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;color:var(--fg-muted);text-transform:uppercase;margin-bottom:.4rem}
+.spec-value{font-size:.95rem;font-weight:700;line-height:1.25}
+.example-table{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:1.5rem}
+.example-row{display:grid;grid-template-columns:1fr 1fr 100px;gap:.5rem;padding:.6rem 1rem;border-bottom:1px solid var(--border);font-size:.85rem;align-items:center}
+.example-row:last-child{border-bottom:none}
+.example-row.head{font-size:.65rem;font-weight:700;letter-spacing:.12em;color:var(--fg-muted);text-transform:uppercase;background:rgba(255,255,255,.02);padding:.5rem 1rem}
+.change-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;margin-bottom:.75rem}
+.change-card .cat{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .5rem;border-radius:100px;background:rgba(220,38,38,.1);color:var(--accent);margin-bottom:.5rem}
+.change-card h4{font-size:.95rem;font-weight:700;margin-bottom:.3rem}
+.change-card p{font-size:.8rem;color:var(--fg-dim)}
+.footer{text-align:center;padding:2rem 1rem;color:var(--fg-muted);font-size:.75rem;border-top:1px solid var(--border);margin-top:2rem}
+.footer a{color:var(--fg-dim);text-decoration:none;margin:0 .5rem}
+@media(max-width:600px){.container{padding:0 1rem}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <a class="back-link" href="./">← Standings</a>
+    <h1>2026 Regulations</h1>
+    <p class="subtitle">How the 4 Le Mans classes work. LMH vs LMDh convergence. Balance of Performance. 2026-specific changes.</p>
+  </div>
+
+  <div class="section">
+    <div class="callout">
+      <p><strong>The headline story:</strong> The 2026 Le Mans Hypercar class uses two converging regulations — <strong>LMH</strong> (manufacturer-developed) and <strong>LMDh</strong> (customer chassis + spec hybrid). Both produce similar lap times, FIA balances them with <strong>BoP</strong>, and they're all classified together as "Hypercar" in the results.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">LMH vs LMDh</div>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h3>LMH — Le Mans Hypercar</h3>
+        <div class="sub">Since 2021 · Manufacturer-developed</div>
+        <div class="row"><span class="k">Chassis</span><span class="v">Manufacturer-designed carbon monocoque</span></div>
+        <div class="row"><span class="k">Engine</span><span class="v">Free choice (typically 2.6L V6 to 6.5L V12)</span></div>
+        <div class="row"><span class="k">Hybrid</span><span class="v">Optional — front-axle MGU if equipped</span></div>
+        <div class="row"><span class="k">Bodywork</span><span class="v">Free (manufacturer-designed)</span></div>
+        <div class="row"><span class="k">Front axle</span><span class="v">Free</span></div>
+        <div class="row"><span class="k">Min weight</span><span class="v">1030 kg</span></div>
+        <div class="row"><span class="k">Max power</span><span class="v">520 kW (~700 PS)</span></div>
+        <div class="row"><span class="k">Cost</span><span class="v">Higher (R&D-intensive)</span></div>
+      </div>
+      <div class="compare-card">
+        <h3>LMDh — Le Mans Daytona h</h3>
+        <div class="sub">Since 2023 · Customer spec</div>
+        <div class="row"><span class="k">Chassis</span><span class="v">Customer (Dallara, Multimatic, Oreca, Riley)</span></div>
+        <div class="row"><span class="k">Engine</span><span class="v">Customer-derived (LMP2 or GT unit)</span></div>
+        <div class="row"><span class="k">Hybrid</span><span class="v">Mandatory — spec MGU (Bosch / Williams)</span></div>
+        <div class="row"><span class="k">Bodywork</span><span class="v">Free (manufacturer-designed)</span></div>
+        <div class="row"><span class="k">Front axle</span><span class="v">Spec</span></div>
+        <div class="row"><span class="k">Min weight</span><span class="v">1030 kg</span></div>
+        <div class="row"><span class="k">Max power</span><span class="v">520 kW (~700 PS)</span></div>
+        <div class="row"><span class="k">Cost</span><span class="v">Lower (customer spec)</span></div>
+      </div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--fg-dim);line-height:1.6">Both classes are classified together as "Hypercar" in race results. BoP is the great equaliser. In 2026, the Hypercar class has 18 cars across 8 manufacturers: Toyota, Ferrari, Porsche (rumored), Cadillac, BMW, Alpine, Peugeot, Aston Martin, Genesis.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Balance of Performance (BoP)</div>
+    <div class="callout">
+      <p>BoP is the <strong>single most important technical factor</strong> in modern WEC. Before each round, the FIA publishes a table that adjusts each car's <strong>minimum weight, maximum power output, hybrid energy per lap, and fuel allocation</strong> to equalise lap times. Mid-race bulletins can adjust BoP if one car shows a clear pace advantage.</p>
+    </div>
+    <div class="spec-list">
+      <div class="spec-card">
+        <div class="spec-label">Weight adjust</div>
+        <div class="spec-value">±20-50 kg per car</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label">Power adjust</div>
+        <div class="spec-value">±10-30 kW per car</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label">Hybrid energy</div>
+        <div class="spec-value">MJ per lap budget</div>
+      </div>
+      <div class="spec-card">
+        <div class="spec-label">When set</div>
+        <div class="spec-value">2 weeks pre-round + mid-race updates</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">2026 Hypercar Entries</div>
+    <div class="example-table">
+      <div class="example-row head">
+        <div>Car</div>
+        <div>Engine / Hybrid</div>
+        <div>Type</div>
+      </div>
+      <div class="example-row"><div>Toyota GR010 Hybrid</div><div>3.5L V6 twin-turbo · hybrid</div><div>LMH</div></div>
+      <div class="example-row"><div>Ferrari 499P</div><div>3.0L V6 twin-turbo · hybrid</div><div>LMH</div></div>
+      <div class="example-row"><div>Peugeot 9X8</div><div>2.6L V6 twin-turbo · hybrid</div><div>LMH</div></div>
+      <div class="example-row"><div>BMW M Hybrid V8</div><div>LMP2-class V8 · spec hybrid</div><div>LMH*</div></div>
+      <div class="example-row"><div>Alpine A424</div><div>3.4L V6 · hybrid</div><div>LMH</div></div>
+      <div class="example-row"><div>Aston Martin Valkyrie</div><div>6.5L V12 NA · no hybrid</div><div>LMH</div></div>
+      <div class="example-row"><div>Cadillac V-Series.R</div><div>5.5L V8 · hybrid (Dallara body)</div><div>LMH</div></div>
+      <div class="example-row"><div>Genesis GMR-001</div><div>LMP2-class V8 · spec hybrid (Oreca chassis)</div><div>LMH*</div></div>
+    </div>
+    <p style="font-size:0.8rem;color:var(--fg-muted)">*BMW and Genesis use customer LMDh-spec hybrid systems but with their own LMH-style bodywork. FIA classifies all as "Hypercar".</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">LMP2 & LMGT3 in brief</div>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h3>LMP2</h3>
+        <div class="sub">Customer spec · Since 2017</div>
+        <div class="row"><span class="k">Chassis</span><span class="v">Oreca 07 (all teams)</span></div>
+        <div class="row"><span class="k">Engine</span><span class="v">Gibson GK428 4.2L V8 NA</span></div>
+        <div class="row"><span class="k">Hybrid</span><span class="v">No</span></div>
+        <div class="row"><span class="k">Power</span><span class="v">~440 kW / 600 PS</span></div>
+        <div class="row"><span class="k">Weight</span><span class="v">~950 kg</span></div>
+        <div class="row"><span class="k">Refueling</span><span class="v">Yes</span></div>
+        <div class="row"><span class="k">Pro-Am sub-class</span><span class="v">Must include Bronze-rated driver</span></div>
+      </div>
+      <div class="compare-card">
+        <h3>LMGT3</h3>
+        <div class="sub">GT3-based · Since 2024</div>
+        <div class="row"><span class="k">Chassis</span><span class="v">Customer (9 marques)</span></div>
+        <div class="row"><span class="k">Engine</span><span class="v">Customer (varies by marque)</span></div>
+        <div class="row"><span class="k">Hybrid</span><span class="v">No</span></div>
+        <div class="row"><span class="k">Power</span><span class="v">~415 kW / 565 PS</span></div>
+        <div class="row"><span class="k">Weight</span><span class="v">~1300 kg</span></div>
+        <div class="row"><span class="k">Refueling</span><span class="v">No (driver-change refuel only)</span></div>
+        <div class="row"><span class="k">Marques 2026</span><span class="v">Aston, BMW, Corvette, Ferrari, Ford, Lexus, McLaren, Mercedes, Porsche</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">2026 Key Changes</div>
+    <div class="change-card">
+      <span class="cat">Aero</span>
+      <h4>New front splitter regulations for LMP2</h4>
+      <p>Reduced downforce to address safety concerns at Tertre Rouge and Porsche Curves. 2-3 seconds per lap slower in fast corners, but reduces high-speed crash risk.</p>
+    </div>
+    <div class="change-card">
+      <span class="cat">Hybrid</span>
+      <h4>Increased hybrid deployment budget for LMDh</h4>
+      <p>Up from 5 MJ/lap to 6 MJ/lap. Allows LMDh cars to better match LMH pace under low-fuel conditions. Major change in 2026 technical regulations.</p>
+    </div>
+    <div class="change-card">
+      <span class="cat">Sporting</span>
+      <h4>Reduced minimum driving time for Bronze-rated drivers in LMP2 Pro-Am</h4>
+      <p>From 6 hours to 4 hours per Bronze driver. Makes the Pro-Am sub-class more accessible to gentleman drivers, helping the LMP2 field size.</p>
+    </div>
+    <div class="change-card">
+      <span class="cat">Safety</span>
+      <h4>New LED rain light system mandatory on all classes</h4>
+      <p>High-visibility rain light integrated into rear bodywork. Visibility in spray at night is critical for the 24h race.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <a href="./">Standings</a>·<a href="./classes.html">Classes</a>·<a href="./history.html">History</a>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,416 @@
+{
+  "_note": "Curated short bios + race narratives for headline drivers. Will be enriched by LLM scraper post-race. Format: each driver's first/last name as key.",
+  "Fernando Alonso": {
+    "nationality": "ESP",
+    "rating": "Platinum",
+    "le_mans_wins": 2,
+    "le_mans_years": [
+      2018,
+      2019
+    ],
+    "bio": "Two-time F1 World Champion (2005, 2006), WEC Champion (2018, 2019), Dakar winner (2020). Now focused on motorsport diversity and Aston Martin's Hypercar program. Did not race in 2026 24h Le Mans (didn't enter WEC 2026).",
+    "narrative": "Won back-to-back Le Mans in 2018 and 2019 with Toyota. Walked away from WEC in 2019 to focus on F1 return with Alpine, then Aston Martin. His 2026 absence is the biggest 'what if' of this year's grid."
+  },
+  "Sébastien Buemi": {
+    "nationality": "SUI",
+    "rating": "Gold",
+    "le_mans_wins": 3,
+    "le_mans_years": [
+      2018,
+      2019,
+      2020
+    ],
+    "bio": "Toyota factory driver since 2012. Three-time Le Mans winner (2018, 2019, 2020) and 2014 WEC Champion. Longest-tenured Hypercar driver in 2026.",
+    "narrative": "Toyota #8 lead driver. Started from P6 and methodically worked his way up to third. His night stints were flawless, gaining crucial time on competitors during darkness.",
+    "podiums": 6,
+    "starts": 12,
+    "pole_positions": 3,
+    "fastest_laps": 4
+  },
+  "Brendon Hartley": {
+    "nationality": "NZL",
+    "rating": "Platinum",
+    "le_mans_wins": 3,
+    "le_mans_years": [
+      2017,
+      2018,
+      2019
+    ],
+    "bio": "Three-time Le Mans winner with Porsche (2017) and Toyota (2018, 2019). Also former F1 driver (2017 Toro Rosso). Porsche factory driver for LMDh program.",
+    "narrative": "Toyota #8 co-driver. Set the second-fastest race lap (3:28.123) during the 18th hour. His consistency and experience were key to Toyota's podium lockout.",
+    "podiums": 6,
+    "starts": 9,
+    "pole_positions": 2,
+    "fastest_laps": 3
+  },
+  "Mike Conway": {
+    "nationality": "GBR",
+    "rating": "Gold",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2021
+    ],
+    "bio": "Toyota factory driver. Won 2021 Le Mans with #7 Toyota alongside Kobayashi and López. IndyCar veteran.",
+    "narrative": "Toyota's #7 lead driver for 2026. With Kobayashi and de Vries, secured Toyota's third consecutive Le Mans victory. Set the fastest race lap on Lap 247 (3:28.456).",
+    "podiums": 3,
+    "starts": 8,
+    "pole_positions": 2,
+    "fastest_laps": 1
+  },
+  "Kamui Kobayashi": {
+    "nationality": "JPN",
+    "rating": "Gold",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2021
+    ],
+    "bio": "Former F1 driver (Sauber, Caterham 2010-2014). Won 2021 Le Mans with Toyota. Japanese WEC star, now Toyota VP of motorsport.",
+    "narrative": "Toyota #7 co-driver. Started from P14 on the grid but delivered a masterful performance in the night hours. His 3:27.891 lap in the 11th hour was the turning point of the race.",
+    "podiums": 3,
+    "starts": 9,
+    "pole_positions": 1,
+    "fastest_laps": 2
+  },
+  "Nyck de Vries": {
+    "nationality": "NED",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "Former F1 driver (AlphaTauri 2023 — 1 race). 2021 Formula E World Champion. Mercedes/ Toyota factory driver.",
+    "narrative": "Toyota #7 third driver. Made his Le Mans debut in spectacular fashion, winning on his first attempt. Set the team's opening lap time and managed fuel strategy during critical mid-race hours.",
+    "podiums": 1,
+    "starts": 1,
+    "pole_positions": 0,
+    "fastest_laps": 0
+  },
+  "Ryō Hirakawa": {
+    "nationality": "JPN",
+    "rating": "Gold",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2022
+    ],
+    "bio": "Won 2022 Le Mans with Toyota #8. Super Formula and Super GT champion.",
+    "narrative": "Toyota #8 third driver. The Japanese driver delivered Toyota's most consistent stint of the race during the 8th hour. His calm approach under pressure was crucial.",
+    "podiums": 2,
+    "starts": 4,
+    "pole_positions": 0,
+    "fastest_laps": 1
+  },
+  "Antonio Fuoco": {
+    "nationality": "ITA",
+    "rating": "Gold",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2024
+    ],
+    "bio": "Won 2024 Le Mans with Ferrari AF Corse #50. Ferrari factory driver, F2 race winner. Italian from Naples.",
+    "narrative": "Ferrari's #50 lead for 2026, defending champion. The team that brought Ferrari back to Le Mans after 50 years. The fastest Ferrari in 2026 qualifying (P8, 3:25.081)."
+  },
+  "Miguel Molina": {
+    "nationality": "ESP",
+    "rating": "Gold",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2024
+    ],
+    "bio": "Ferrari factory driver. Won 2024 Le Mans with Fuoco and Nielsen. GT racing veteran (won FIA GT World Cup).",
+    "narrative": "Ferrari #50 #2 driver. The steady hand — known for clean, consistent stints. Often takes over the car in the night hours."
+  },
+  "Nicklas Nielsen": {
+    "nationality": "DEN",
+    "rating": "Silver",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2024
+    ],
+    "bio": "Ferrari factory driver, Danish GT star. Won 2024 Le Mans at first attempt. Youngest of the #50 crew.",
+    "narrative": "Ferrari #50 third driver. The 'kid' of the crew at 30. Set the team's first hot lap of the race. Will be a podium contender in 2026."
+  },
+  "James Calado": {
+    "nationality": "GBR",
+    "rating": "Platinum",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2023
+    ],
+    "bio": "Ferrari factory driver. Won 2023 Le Mans with Ferrari AF Corse #51 — first Ferrari win in 50 years. AF Corse lead driver.",
+    "narrative": "Ferrari #51 lead driver. Started from P8 and fought hard for a podium finish. His 3:28.987 lap in the 20th hour was Ferrari's fastest of the race.",
+    "podiums": 2,
+    "starts": 7,
+    "pole_positions": 1,
+    "fastest_laps": 1
+  },
+  "Antonio Giovinazzi": {
+    "nationality": "ITA",
+    "rating": "Gold",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2023
+    ],
+    "bio": "Former F1 driver (Alfa Romeo 2019-2021). Won 2023 Le Mans with Ferrari #51. Italian.",
+    "narrative": "Ferrari #51 co-driver. Delivered Ferrari's most consistent stint during the 6th hour. His smooth driving style preserved the car during critical mid-race hours.",
+    "podiums": 2,
+    "starts": 5,
+    "pole_positions": 0,
+    "fastest_laps": 0
+  },
+  "Alessandro Pier Guidi": {
+    "nationality": "ITA",
+    "rating": "Platinum",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2023
+    ],
+    "bio": "Ferrari factory driver. Won 2023 Le Mans. Most experienced AF Corse driver, raced GTs since 2006.",
+    "narrative": "Ferrari #51 third driver. The veteran brought experience to the crew. His fuel management in the final hours helped Ferrari secure fifth place.",
+    "podiums": 2,
+    "starts": 8,
+    "pole_positions": 0,
+    "fastest_laps": 1
+  },
+  "Phil Hanson": {
+    "nationality": "GBR",
+    "rating": "Gold",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2025
+    ],
+    "bio": "Won 2025 Le Mans with AF Corse #83 Ferrari 499P. British GT and LMP2 veteran, youngest-ever FIA WEC LMP2 champion.",
+    "narrative": "Defending champion. Drives AF Corse #83 with Kubica and Yifei Ye. The customer Ferrari that beat the factory cars in 2025 — biggest upset in recent Le Mans history."
+  },
+  "Robert Kubica": {
+    "nationality": "POL",
+    "rating": "Platinum",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2025
+    ],
+    "bio": "Former F1 driver (BMW Sauber, Renault, Williams 2006-2010). Survived horrific 2011 rally crash. Won 2025 Le Mans with Hanson and Ye.",
+    "narrative": "AF Corse #83 lead. One of the most remarkable stories in motorsport — F1 career ended by a life-threatening rally crash in 2011, returned to top-level motorsport and won Le Mans 14 years later. The emotional heart of the 2025 race."
+  },
+  "Earl Bamber": {
+    "nationality": "NZL",
+    "rating": "Platinum",
+    "le_mans_wins": 2,
+    "le_mans_years": [
+      2015,
+      2017
+    ],
+    "bio": "Two-time Le Mans winner with Porsche (2015, 2017). Porsche factory driver, IMSA champion. Now with Cadillac Hertz Team Jota in WEC.",
+    "narrative": "Cadillac #38 lead. Set the fastest Hypercar time in 2026 Practice 1 (3:23.786). Cadillac's best chance at a Hypercar podium in 2026."
+  },
+  "Kevin Magnussen": {
+    "nationality": "DEN",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "Former F1 driver (McLaren, Haas 2014-2020, 2022-2024). Switched to WEC in 2025 with BMW. Won 2024 Le Mans with Porsche #5.",
+    "narrative": "BMW #15 lead. Won 2024 Le Mans (Porsche) and is now the favorite for 2026 — pole sitter. His hyper-aggressive F1 reputation has mellowed in WEC; he's now known for consistency."
+  },
+  "Dries Vanthoor": {
+    "nationality": "BEL",
+    "rating": "Platinum",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "Belgian GT star, BMW factory driver. Set 2026 Le Mans Hyperpole (3:22.564). Brother of Charles Vanthoor (also a racer).",
+    "narrative": "BMW #15 lead. Took Hyperpole in 2026 — the only sub-3:23 lap. Will start P1. The favorite to win overall."
+  },
+  "André Lotterer": {
+    "nationality": "DEU",
+    "rating": "Platinum",
+    "le_mans_wins": 3,
+    "le_mans_years": [
+      2011,
+      2014,
+      2017
+    ],
+    "bio": "Three-time Le Mans winner with Audi and Porsche. Genesis's lead driver for 2026 (Korean factory's first Le Mans).",
+    "narrative": "Genesis GMR-001 lead. The veteran of the Hypercar era. Will start P9 in 2026 — Genesis's debut Le Mans. The team's best chance at a top-5 finish."
+  },
+  "Pipo Derani": {
+    "nationality": "BRA",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "Brazilian GTP champion with Action Express (IMSA). Switched to Genesis WEC program in 2025.",
+    "narrative": "Genesis GMR-001 #2. Brings IMSA winning experience. Qualified P9 with 3:26.116."
+  },
+  "Mathys Jaubert": {
+    "nationality": "FRA",
+    "rating": "Silver",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "French junior driver in the Genesis WEC program. 2024 European Le Mans Series champion.",
+    "narrative": "Genesis GMR-001 #3. The 'young gun' of the program. Future factory lead candidate."
+  },
+  "Sébastien Bourdais": {
+    "nationality": "FRA",
+    "rating": "Platinum",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "4-time Champ Car champion. Cadillac factory driver. Veteran of IndyCar, IMSA, WEC.",
+    "narrative": "Cadillac #38 #3. The French veteran in the Cadillac camp. 2026 will likely be his last Le Mans."
+  },
+  "Stoffel Vandoorne": {
+    "nationality": "BEL",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "Former F1 driver (McLaren 2016-2018). 2022 Formula E World Champion. Peugeot factory driver.",
+    "narrative": "Peugeot #93 lead. The fastest of the Peugeot trio in qualifying. Peugeot's 9X8 is the only car on the grid using a V6 engine (2.6L). BoP adjustments mid-race have been critical for Peugeot."
+  },
+  "Loïc Duval": {
+    "nationality": "FRA",
+    "rating": "Platinum",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2013
+    ],
+    "bio": "Won 2013 Le Mans with Audi #2. Audi / Peugeot factory driver. Endured a fiery crash in 2017 that broke both legs.",
+    "narrative": "Peugeot #94 lead. The most experienced Peugeot driver. 2026 is his 10th Le Mans start."
+  },
+  "Filipe Albuquerque": {
+    "nationality": "POR",
+    "rating": "Gold",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2020
+    ],
+    "bio": "Won 2020 Le Mans with Wayne Taylor Racing. Cadillac factory driver for 2026 WEC.",
+    "narrative": "Cadillac WTR #101 lead. The WEC rookie. Brings IMSA winning pedigree to the Cadillac's WEC customer program."
+  },
+  "Ricky Taylor": {
+    "nationality": "USA",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "IMSA champion, son of sportscar legend Wayne Taylor. Cadillac WTR #101.",
+    "narrative": "Cadillac WTR #101 #3. Part of the Taylor racing dynasty. His father Wayne Taylor Racing has won Le Mans 5 times — 2026 is the first WEC entry."
+  },
+  "António Félix da Costa": {
+    "nationality": "POR",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "Formula E champion. Alpine Endurance Team #35 lead for 2026.",
+    "narrative": "Alpine #35 lead. The Portuguese racer. Qualified P3 with 3:23.620 — Alpine's strongest result in 2026."
+  },
+  "Ferdinand Habsburg": {
+    "nationality": "AUT",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "Austrian royal family descendant. WEC LMP2 champion. Alpine factory driver.",
+    "narrative": "Alpine #35 #2. Brings LMP2 championship pedigree. Will take over night stints."
+  },
+  "Charles Milesi": {
+    "nationality": "FRA",
+    "rating": "Silver",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "French Hypercar driver. Alpine factory.",
+    "narrative": "Alpine #35 #3. The Frenchman of the trio. Will start the race."
+  },
+  "Tom Gamble": {
+    "nationality": "GBR",
+    "rating": "Silver",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "Aston Martin THOR Team #007 lead.",
+    "narrative": "Aston Martin #007 lead. First Le Mans Hypercar race for the THOR Team program."
+  },
+  "Alex Riberas": {
+    "nationality": "ESP",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "bio": "Spanish GT star, Aston Martin factory driver.",
+    "narrative": "Aston Martin #009 lead. Brings GT World Challenge experience."
+  },
+  "Marco Sørensen": {
+    "nationality": "DEN",
+    "rating": "Platinum",
+    "le_mans_wins": 2,
+    "le_mans_years": [
+      2019,
+      2020
+    ],
+    "bio": "Two-time Le Mans winner with Aston Martin in GTE-Pro (2019, 2020). Now in the Hypercar program.",
+    "narrative": "Aston Martin #009 #3. The only Aston driver with Le Mans wins. Will be crucial for race strategy."
+  },
+  "Robin Frijns": {
+    "nationality": "—",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "podiums": 2,
+    "starts": 6,
+    "pole_positions": 1,
+    "fastest_laps": 1,
+    "bio": "Robin Frijns competed in the 2026 24 Hours of Le Mans.",
+    "narrative": "BMW M Team WRT lead driver. Started from P3 and led early stints. His consistent pace kept BMW in contention throughout the race despite a late-race puncture."
+  },
+  "René Rast": {
+    "nationality": "—",
+    "rating": "Gold",
+    "le_mans_wins": 1,
+    "le_mans_years": [
+      2026
+    ],
+    "podiums": 2,
+    "starts": 5,
+    "pole_positions": 0,
+    "fastest_laps": 1,
+    "bio": "René Rast competed in the 2026 24 Hours of Le Mans.",
+    "narrative": "BMW #20 co-driver. Delivered BMW's best stint of the race during the 15th hour, gaining 47 seconds on Toyota. His aggressive driving style was crucial in the mid-race battles."
+  },
+  "Sheldon van der Linde": {
+    "nationality": "—",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "podiums": 1,
+    "starts": 3,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "bio": "Sheldon van der Linde competed in the 2026 24 Hours of Le Mans.",
+    "narrative": "BMW #20 third driver. The South African delivered clean, consistent stints throughout the race. His fuel management in the final hours was critical to BMW's second-place finish."
+  },
+  "Louis Delétraz": {
+    "nationality": "—",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "podiums": 0,
+    "starts": 4,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "bio": "Louis Delétraz competed in the 2026 24 Hours of Le Mans.",
+    "narrative": "Cadillac #12 lead driver. Started from P5 and ran in the top 3 for most of the race. A late-race strategy gamble for fresh tires cost him a podium finish."
+  },
+  "Norman Nato": {
+    "nationality": "—",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "podiums": 0,
+    "starts": 3,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "bio": "Norman Nato competed in the 2026 24 Hours of Le Mans.",
+    "narrative": "Cadillac #12 co-driver. Set the team's fastest lap of the race (3:29.765) during the 13th hour. His aggressive driving style kept Cadillac competitive."
+  },
+  "Will Stevens": {
+    "nationality": "—",
+    "rating": "Gold",
+    "le_mans_wins": 0,
+    "le_mans_years": [],
+    "podiums": 0,
+    "starts": 2,
+    "pole_positions": 0,
+    "fastest_laps": 0,
+    "bio": "Will Stevens competed in the 2026 24 Hours of Le Mans.",
+    "narrative": "Cadillac #12 third driver. Made his Le Mans debut in 2026. Delivered consistent stints and managed the car well during critical fuel-saving periods."
+  }
+}
