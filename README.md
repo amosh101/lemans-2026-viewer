@@ -23,48 +23,35 @@ A comprehensive viewer for the 24 Hours of Le Mans race at Circuit de la Sarthe,
 │   ├── driver-bios.json    # 30+ driver bios with race narratives
 │   ├── race-card.json      # Race status and information
 │   ├── live-timing.json    # Live timing data (updated hourly)
-│   └── 2026-results-final.json  # Final race results
 └── scripts/                # Automation scripts
-    ├── refresh_live_timing.py     # Hourly live timing updates
-    ├── post_race_results.py       # Post-race final results processing
-    ├── update_website_data.py     # Comprehensive data updater
     ├── update_race_results.py     # Race results data updater
     ├── update_driver_stats.py     # Driver statistics updater
     ├── add_car_images.py          # Car images adder
     └── test-ios.mjs               # Playwright iOS WebKit test
 ```
 
+> ⚠️ **Note:** Previous mock data scripts (`refresh_live_timing.py`, `post_race_results.py`, `update_website_data.py`, `2026-results-final.json`) were deleted 2026-06-30. They returned hardcoded fake race data with `"source": "mock"`. Replacements need to be built against real WEC/FIA APIs before the 2027 race.
+
 ## 🔄 Automated Updates
 
-The viewer automatically updates for future Le Mans races at Circuit de la Sarthe:
+The viewer had 3 cron jobs for Le Mans live timing + post-race results. **All 3 were paused on 2026-06-30** because the underlying scripts (`refresh_live_timing.py`, `post_race_results.py`) were deleted — they returned hardcoded mock race data, not real WEC/FIA data. The cron jobs will be re-enabled when real-data replacements are built.
 
-### Cron Jobs
-
-1. **Live Timing Updates**
-   - Runs hourly during race weekends (Saturday 13:00-16:00 UTC)
-   - Updates live timing data on the website in real-time
-   - Scheduled for June 10-11 each year
-
-2. **Post-Race Results**
-   - Runs 1 hour after race end (Sunday 16:00 UTC)
-   - Updates final race results on the website
-   - Scheduled for June 11 each year
-
-3. **Monday Re-run**
-   - Runs Monday at 06:00 UTC to catch any updated official results
-   - Ensures website has the most accurate final data
-   - Scheduled for June 12 each year
+| Cron job | Schedule | Status |
+|---|---|---|
+| `3762bdd51ac0` Le Mans Live Timing | `0 13-16 10-11 6 *` | ⏸ Paused |
+| `8f0a8e3e6715` Le Mans Post-Race Results | `0 16 11 6 *` | ⏸ Paused |
+| `f8eac7a40ba2` Le Mans Post-Race Re-run | `0 6 12 6 *` | ⏸ Paused |
 
 ### Data Flow
 
 ```
-Live Race Data → refresh_live_timing.py → live-timing.json → Website
-Final Results → post_race_results.py → 2026-results-final.json → Entry List
+Live Race Data → [TBD: real WEC/FIA fetcher] → live-timing.json → Website
+Final Results  → [TBD: real fiawec fetcher]      → entry-list   → Race Card
 ```
 
 ## 🏆 2026 Race Results
 
-The viewer includes complete results from the 2026 24 Hours of Le Mans:
+The viewer includes complete results from the 2026 24 Hours of Le Mans.
 
 - **Winner:** Toyota Racing #7 (Mike Conway, Kamui Kobayashi, Nyck de Vries)
 - **Final Time:** 24:03:01.030

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<title>Car Detail — 24H Le Mans 2026</title>
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #000000; --bg-card: #111111; --bg-card-hover: #1a1a1a;
+  --border: #1f1f1f; --border-light: #2a2a2a;
+  --fg: #f0f0fa; --fg-dim: #a0a0b0; --fg-muted: #6b6b7b;
+  --accent: #dc2626;
+  --hypercar: #dc2626; --lmp2: #2563eb; --lmp2-proam: #7c3aed; --lmgt3: #16a34a;
+  --gold: #fbbf24; --silver: #d1d5db; --bronze: #a16207;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+body { min-height: 100vh; padding-bottom: 4rem; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+
+/* === HEADER === */
+.car-header {
+  position: relative; padding: 2rem 0 1.5rem; border-bottom: 1px solid var(--border);
+  background: radial-gradient(ellipse 70% 60% at 30% 0%, #1e40af40, transparent 70%);
+}
+.back-link {
+  display: inline-block; font-size: 0.75rem; font-weight: 600;
+  color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.12em;
+  text-decoration: none; margin-bottom: 1.5rem; padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border); border-radius: 100px;
+  transition: all 0.2s;
+}
+.back-link:hover { color: var(--fg); border-color: var(--border-light); }
+.car-num-display {
+  display: flex; align-items: center; gap: 1.25rem; margin-bottom: 0.75rem;
+}
+.car-num {
+  font-size: 3.5rem; font-weight: 900; letter-spacing: -0.04em;
+  line-height: 1; font-variant-numeric: tabular-nums;
+  color: #1e40af;
+}
+.car-class-badge {
+  display: inline-block; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.35rem 0.7rem; border-radius: 100px;
+  background: var(--class-bg, var(--bg-card));
+  color: var(--class-color, var(--fg));
+  border: 1px solid var(--class-color, var(--border));
+}
+.car-position {
+  display: inline-block; font-size: 0.8rem; font-weight: 700;
+  color: var(--fg-dim); margin-left: 0.5rem;
+}
+.car-team {
+  font-size: 1.5rem; font-weight: 800; letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+.car-full-name {
+  font-size: 0.95rem; color: var(--fg-dim); letter-spacing: 0.02em;
+}
+
+/* === SECTION TITLE === */
+.section { padding: 2rem 0; }
+.section-title {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
+  color: var(--fg-muted); text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.section-title::before {
+  content: ''; width: 4px; height: 14px; background: var(--accent);
+  border-radius: 2px;
+}
+
+/* === CAR DEEP-DIVE === */
+.spec-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem; margin-bottom: 1.5rem;
+}
+.spec-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.1rem 1.25rem;
+  border-left: 2px solid var(--border-light);
+}
+.spec-label {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em;
+  color: var(--fg-muted); text-transform: uppercase; margin-bottom: 0.4rem;
+}
+.spec-value {
+  font-size: 1rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25;
+}
+.spec-sub {
+  font-size: 0.8rem; color: var(--fg-dim); margin-top: 0.3rem; line-height: 1.4;
+}
+
+/* === DRIVERS === */
+.drivers-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.driver-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.25rem 1.4rem;
+}
+.driver-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+.driver-name {
+  font-size: 1.05rem; font-weight: 800; letter-spacing: -0.01em;
+  margin-bottom: 0.2rem;
+}
+.driver-meta {
+  font-size: 0.75rem; color: var(--fg-dim);
+  display: flex; gap: 0.5rem; flex-wrap: wrap;
+}
+.driver-rating {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 0.25rem 0.55rem;
+  border-radius: 100px;
+  border: 1px solid;
+}
+.rating-platinum { color: #e5e7eb; border-color: #6b7280; background: rgba(107, 114, 128, 0.1); }
+.rating-gold { color: var(--gold); border-color: var(--gold); background: rgba(251, 191, 36, 0.05); }
+.rating-silver { color: var(--silver); border-color: var(--silver); background: rgba(209, 213, 219, 0.05); }
+.rating-bronze { color: var(--bronze); border-color: var(--bronze); background: rgba(161, 98, 7, 0.05); }
+
+.driver-stats {
+  display: flex; gap: 1rem; margin: 0.75rem 0; padding: 0.6rem 0;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  font-size: 0.7rem;
+}
+.driver-stat-num { font-size: 1.3rem; font-weight: 800; line-height: 1; }
+.driver-stat-label { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-muted); }
+
+.driver-bio {
+  font-size: 0.85rem; line-height: 1.55; color: var(--fg-dim);
+  margin: 0.5rem 0 0.75rem;
+}
+.driver-narrative {
+  background: var(--bg-elev, rgba(255,255,255,0.02));
+  border-left: 2px solid var(--accent);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8rem; line-height: 1.55; color: var(--fg);
+  font-style: italic; border-radius: 0 6px 6px 0;
+  margin-top: 0.5rem;
+}
+.driver-narrative::before {
+  content: 'Race narrative · ';
+  font-style: normal;
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--accent);
+  display: block; margin-bottom: 0.3rem;
+}
+
+/* === FOOTER === */
+.footer {
+  text-align: center; padding: 2rem 1rem; color: var(--fg-muted);
+  font-size: 0.75rem; border-top: 1px solid var(--border); margin-top: 2rem;
+}
+.footer a { color: var(--fg-dim); text-decoration: none; margin: 0 0.5rem; }
+
+/* === ERROR === */
+.error-state {
+  text-align: center; padding: 4rem 1rem; color: var(--fg-dim);
+}
+.error-state a { color: var(--accent); }
+
+/* === MOBILE === */
+@media (max-width: 600px) {
+  .car-num { font-size: 2.75rem; }
+  .container { padding: 0 1rem; }
+  .car-team { font-size: 1.2rem; }
+  .drivers-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="car-header">
+    <div class="container">
+      <a href="./" class="back-link">← Standings</a>
+      <div class="car-num-display">
+        <div class="car-num">017</div>
+        <div>
+          <div class="car-team">Genesis Magma Racing</div>
+          <div class="car-full-name">Genesis GMR-001</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    
+      <div class="section">
+        <div class="section-title">Car Image</div>
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <img src="https://www.fiawec.com/media/cache/resolve/news_card/umbrella_media/dppiproduction-00004641-0018-6a2ed5abaf192779964891.jpg" alt="Genesis GMR-001" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #1f1f1f;">
+        </div>
+      </div>
+        
+    
+    <div class="section">
+      <div class="section-title">Race Results</div>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-label">Final Position</div>
+          <div class="spec-value">—</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Laps Completed</div>
+          <div class="spec-value">None</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Time/Gap</div>
+          <div class="spec-value">+25 Laps</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Status</div>
+          <div class="spec-value">finished</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">Car Deep-Dive</div>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-label">Chassis</div>
+          <div class="spec-value">Genesis GMR-001 (LMH, Oreca-derived)</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Engine</div>
+          <div class="spec-value">modified LMP2-class V8</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Hybrid</div>
+          <div class="spec-value">Yes (spec MGU)</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Power</div>
+          <div class="spec-value">500 kW / 680 PS</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Min Weight</div>
+          <div class="spec-value">~1030 kg</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">BoP</div>
+          <div class="spec-value">TBD</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Tyres</div>
+          <div class="spec-value">Michelin</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Series</div>
+          <div class="spec-value">WEC</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Qualifying (best)</div>
+          <div class="spec-value">3:26.116</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">Drivers (3)</div>
+      <div class="drivers-grid">
+          <div class="driver-card">
+            <div class="driver-header">
+              <div>
+                <div class="driver-name">Pipo Derani</div>
+                <div class="driver-meta">
+                  
+                  
+                  
+                </div>
+              </div>
+              <div class="driver-rating rating-gold">GOLD</div>
+            </div>
+            
+            <div class="driver-narrative">
+              <p>Genesis GMR-001 #2. Brings IMSA winning experience. Qualified P9 with 3:26.116.</p>
+            </div>
+          </div>
+        
+          <div class="driver-card">
+            <div class="driver-header">
+              <div>
+                <div class="driver-name">Mathys Jaubert</div>
+                <div class="driver-meta">
+                  
+                  
+                  
+                </div>
+              </div>
+              <div class="driver-rating rating-silver">SILVER</div>
+            </div>
+            
+            <div class="driver-narrative">
+              <p>Genesis GMR-001 #3. The 'young gun' of the program. Future factory lead candidate.</p>
+            </div>
+          </div>
+        
+          <div class="driver-card">
+            <div class="driver-header">
+              <div>
+                <div class="driver-name">André Lotterer</div>
+                <div class="driver-meta">
+                  
+                  
+                  <span><span style="color:#fbbf24">★</span><span style="color:#fbbf24">★</span><span style="color:#fbbf24">★</span></span>
+                </div>
+              </div>
+              <div class="driver-rating rating-platinum">PLATINUM</div>
+            </div>
+            
+                <div class="driver-stats">
+                  <div>
+                    <div class="driver-stat-num">3</div>
+                    <div class="driver-stat-label">Wins</div>
+                  </div>
+                  <div>
+                    <div class="driver-stat-num">3</div>
+                    <div class="driver-stat-label">Starts</div>
+                  </div>
+                  <div>
+                    <div class="driver-stat-num">0</div>
+                    <div class="driver-stat-label">Podiums</div>
+                  </div>
+                  <div>
+                    <div class="driver-stat-num">0</div>
+                    <div class="driver-stat-label">Poles</div>
+                  </div>
+                </div>
+            
+            <div class="driver-narrative">
+              <p>Genesis GMR-001 lead. The veteran of the Hypercar era. Will start P9 in 2026 — Genesis's debut Le Mans. The team's best chance at a top-5 finish.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <a href="./">Standings</a>·
+        <a href="./classes.html">Classes</a>·
+        <a href="./regulations.html">Regulations</a>·
+        <a href="./history.html">History</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
