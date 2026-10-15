@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debug Car #7</title>
+</head>
+<body>
+<div id="root">Loading...</div>
+<div id="error" style="color: red; display: none;"></div>
+<script>
+// Debug version to test if JavaScript works and show errors
+window.onerror = function(message, source, lineno, colno, error) {
+  document.getElementById('error').innerHTML = 'Error: ' + message + ' at line ' + lineno;
+  document.getElementById('error').style.display = 'block';
+  return true;
+};
+
+try {
+  fetch('./data/entry-list.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok: ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(data => {
+      const car = data.cars.find(c => c.car_number === '7');
+      if (car && car.image_url) {
+        document.getElementById('root').innerHTML = `
+          <h1>Car #${car.car_number} - ${car.team}</h1>
+          <img src="${car.image_url}" alt="Car Image" style="max-width: 100%; height: auto;">
+          <p>If you can see this image, JavaScript is working correctly.</p>
+        `;
+      } else {
+        document.getElementById('root').innerHTML = '<p>Car not found or no image URL</p>';
+      }
+    })
+    .catch(error => {
+      document.getElementById('root').innerHTML = '<p>Fetch error: ' + error.message + '</p>';
+      document.getElementById('error').innerHTML = 'Fetch error: ' + error.message;
+      document.getElementById('error').style.display = 'block';
+    });
+} catch (error) {
+  document.getElementById('root').innerHTML = '<p>JavaScript error: ' + error.message + '</p>';
+  document.getElementById('error').innerHTML = 'JavaScript error: ' + error.message;
+  document.getElementById('error').style.display = 'block';
+}
+</script>
+</body>
+</html>

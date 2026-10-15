@@ -4,7 +4,7 @@ A comprehensive viewer for the 24 Hours of Le Mans race at Circuit de la Sarthe,
 
 ## 🌐 Access
 
-**Live URL:** http://100.91.143.50:8083/?v=lemans1 (Tailscale-only)
+**Live URL:** Tailscale-only (private network, port 8083)
 
 ## 📁 Project Structure
 
@@ -77,9 +77,9 @@ git clone [repository-url]
 cd lemans-2026-viewer
 
 # Start the server
-python3 -m http.server 8083 --bind 100.91.143.50
+python3 -m http.server 8083 --bind "$TAILSCALE_IP"
 
-# Access at http://100.91.143.50:8083/?v=lemans1
+# Access via the Tailscale interface, port 8083
 ```
 
 ## 📅 Future Race Support

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debug Car #7</title>
+</head>
+<body>
+<div id="root"></div>
+<script>
+// Simple debug version to test if JavaScript works
+fetch('./data/entry-list.json')
+  .then(response => response.json())
+  .then(data => {
+    const car = data.cars.find(c => c.car_number === '7');
+    if (car && car.image_url) {
+      document.getElementById('root').innerHTML = `
+        <h1>Car #${car.car_number} - ${car.team}</h1>
+        <img src="${car.image_url}" alt="Car Image" style="max-width: 100%; height: auto;">
+        <p>If you can see this image, JavaScript is working correctly.</p>
+      `;
+    } else {
+      document.getElementById('root').innerHTML = '<p>Car not found or no image URL</p>';
+    }
+  })
+  .catch(error => {
+    document.getElementById('root').innerHTML = `<p>Error: ${error.message}</p>`;
+  });
+</script>
+</body>
+</html>
